@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= __('TITLE') %></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="dist/favicon.ico">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<!-- Matomo -->
+    <script type="text/javascript">
+        // TODO block localhost
+        var _paq = window._paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.vincentwill.de/";
+            _paq.push(['setTrackerUrl', u+'hokuspokusp']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'hokuspokusj'; s.parentNode.insertBefore(g,s);
+        })();
+	</script>
+	<!-- End Matomo Code -->
+    
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="header-lang">
+                    <a class="<%= __('EN_ACTIVE') %>" href="/en">EN</a>
+                    <a class="<%= __('DE_ACTIVE') %>"href="/">DE</a>
+                </div>
+                <div class="site-header-inner">
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a class="scroll-link" href="#" data-link="projects"><%= __('PROJECTS') %></a>
+                        </li>
+                        <li>
+                            <a class="scroll-link" href="#" data-link="contact"><%= __('CONTACT') %></a>
+                        </li>
+                        <li>
+                            <a href="/blog" data-link="contact"><%= __('BLOG') %></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero text-light text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <img class="hero-picture" src="dist/imgs/profile.jpg"/>
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing">Vincent Will</h1>
+                        <p class="hero-paragraph is-revealing"><%= __('SUBTITLE') %></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="features-extended section">
+                <div class="container">
+                    <div class="features-extended-inner section-inner has-top-divider">
+                        <div class="features-extended-header text-center">
+                            <div class="container-sm">
+                                <h2 class="section-title mt-0"><%= __('PROJECTS') %></h2>
+                                <p class="section-paragraph"><%= __('PROJECTS_DESCRIPTION') %></p>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="dist/imgs/gamepricecheck.jpg" alt="Game Price Check Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Game Price Check</h3>
+                                <p><%= __('GPC_DESCRIPTION') %></p>
+                                <a href="https://gamepricecheck.com/" target="_blank" rel="noopener"><%= __('PROJECTS_LINKS') %></a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="dist/imgs/bildderfrau.jpg" alt="Bild Der Frau Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Bild der Frau Relaunch</h3>
+                                <p><%= __('BDF_DESCRIPTION') %></p>
+                                <a href="https://www.bildderfrau.de/" target="_blank" rel="noopener"><%= __('PROJECTS_LINKS') %></a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="dist/imgs/friedhof.jpg" alt="Friedhof Weißensee Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Friedhof Weißensee</h3>
+                                <p><%= __('GRAVEYARD_DESCRIPTION') %></p>
+                                <a href="http://www.friedhof-weissensee.de/" target="_blank" rel="noopener"><%= __('PROJECTS_LINKS') %></a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="dist/imgs/vincenius.jpg" alt="Vincenius Art Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Vincenius Art</h3>
+                                <p><%= __('ART_DESCRIPTION') %></p>
+                                <a href="https://vincenius.com/" target="_blank" rel="noopener"><%= __('PROJECTS_LINKS') %></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact section text-center text-light">
+                <div class="container">
+                    <div class="section-inner">
+                        <h2 class="section-title mt-0">Kontakt</h2>
+                        <form action="https://formspree.io/vincentwill@arcor.de" method="POST">
+                            <div class="input-container">
+                                <label for="email">E-Mail:</label>
+                                <input type="email" name="email" placeholder="<%= __('EMAIL_PLACEHOLDER') %>" required/>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="text"><%= __('TEXT_LABEL') %></label>
+                                <textarea rows="4" name="text" placeholder="<%= __('TEXT_PLACEHOLDER') %>" required></textarea>
+                            </div>
+
+                            <div class="input-container">
+                                <input type="submit" value="<%= __('SUBMIT') %>" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="/">
+                            <img src="dist/imgs/logo.png" alt="Vincent Will Logo"/>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="<%= __('LINK_LANGUAGE') %>privacy"><%= __('PRIVACY_TITLE') %></a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://vincenius.com">Art</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://www.linkedin.com/in/vincent-will-58356212a/" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">LinkedIn</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:vincentwill@arcor.de">
+                                <span class="screen-reader-text">E-Mail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> - Vincent Will</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>

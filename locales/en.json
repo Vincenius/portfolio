@@ -1,0 +1,21 @@
+{
+	"EN_ACTIVE": "active",
+	"DE_ACTIVE": "DE_ACTIVE",
+	"TITLE": "Vincent Will - Web-Developer from Berlin",
+	"PROJECTS": "Projects",
+	"CONTACT": "Contact",
+	"BLOG": "Blog",
+	"SUBTITLE": "Web-Developer from Berlin",
+	"PROJECTS_DESCRIPTION": "A selection of my latest projects",
+	"PROJECTS_LINKS": "> Visit Website",
+	"GPC_DESCRIPTION": "A private project for comparing video game prices on different online stores.",
+	"BDF_DESCRIPTION": "Implement the new design of the online presence of Bild der Frau during my time at the agency eThinking.",
+	"GRAVEYARD_DESCRIPTION": "Set up a small wordpress page with design adaptions",
+	"ART_DESCRIPTION": "Simple website for my Art Projects.",
+	"EMAIL_PLACEHOLDER": "Your E-Mail",
+	"TEXT_LABEL": "Message:",
+	"TEXT_PLACEHOLDER": "Your Message",
+	"SUBMIT": "Send",
+	"PRIVACY_TITLE": "Privacy Policy",
+	"LINK_LANGUAGE": "en/"
+}

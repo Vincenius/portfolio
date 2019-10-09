@@ -1,0 +1,21 @@
+{
+	"EN_ACTIVE": "EN_ACTIVE",
+	"DE_ACTIVE": "active",
+	"TITLE": "Vincent Will - Web-Entwickler aus Berlin",
+	"PROJECTS": "Projekte",
+	"CONTACT": "Kontakt",
+	"BLOG": "Blog",
+	"SUBTITLE": "Web-Entwickler aus Berlin",
+	"PROJECTS_DESCRIPTION": "Eine Auswahl meiner letzten Projekte",
+	"PROJECTS_LINKS": "> Zur Webseite",
+	"GPC_DESCRIPTION": "Ein Privates Projekt zum Vergleichen von Preisen für Videospiele auf verschiedenen online Shops.",
+	"BDF_DESCRIPTION": "Umsetzten des neuen Designs der Online-Präsenz von Bild der Frau während meiner Zeit bei der Agentur eThinking.",
+	"GRAVEYARD_DESCRIPTION": "Aufsetzen einer Wordpress Seite mit Design-Anpassungen für den Friedhof Weißensee.",
+	"ART_DESCRIPTION": "Simple Webseite zum zeigen meiner Kunst-Projekte.",
+	"EMAIL_PLACEHOLDER": "Deine E-Mail",
+	"TEXT_LABEL": "Nachricht:",
+	"TEXT_PLACEHOLDER": "Deine Nachricht",
+	"SUBMIT": "Abschicken",
+	"PRIVACY_TITLE": "Datenschutzerklärung",
+	"LINK_LANGUAGE": "/"
+}
