@@ -34,6 +34,6 @@ app.get('/en/privacy', function(req, res) {
   res.render('privacy_en.ejs');
 });
 
-app.listen(4004, () => {
-  console.log('HTTP server running on port 4004');
+app.listen(3000, () => {
+  console.log('HTTP server running on port 3000');
 });
