@@ -18,7 +18,7 @@
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-                var u="//analytics.vincentwill.de/";
+                var u="//analytics.vincentwill.com/";
                 _paq.push(['setTrackerUrl', u+'hokuspokusp']);
                 _paq.push(['setSiteId', '1']);
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -33,8 +33,8 @@
         <header class="site-header">
             <div class="container">
                 <div class="header-lang">
-                    <a class="<%= __('EN_ACTIVE') %>" href="/en">EN</a>
-                    <a class="<%= __('DE_ACTIVE') %>"href="/">DE</a>
+                    <a class="<%= __('EN_ACTIVE') %>" href="/">EN</a>
+                    <a class="<%= __('DE_ACTIVE') %>"href="/de">DE</a>
                 </div>
                 <div class="site-header-inner">
                     <ul class="header-links list-reset m-0">
@@ -43,6 +43,9 @@
                         </li>
                         <li>
                             <a class="scroll-link" href="#" data-link="contact"><%= __('CONTACT') %></a>
+                        </li>
+                        <li>
+                            <a href="/blog"><%= __('BLOG') %></a>
                         </li>
                     </ul>
                 </div>

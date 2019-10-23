@@ -15,12 +15,12 @@ i18n.configure({
 app.use(i18n.init);
 
 app.get('/', function(req, res) {
-  res.setLocale('de');
+  res.setLocale('en');
   res.render('index.ejs');
 });
 
-app.get('/en', function(req, res) {
-  res.setLocale('en');
+app.get('/de', function(req, res) {
+  res.setLocale('de');
   res.render('index.ejs');
 });
 
