@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vincent Will - Web-Developer from Berlin</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="dist/favicon.ico">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<!-- Matomo -->
+    <script type="text/javascript">
+        if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+            console.log('called')
+            var _paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//analytics.vincentwill.com/";
+                _paq.push(['setTrackerUrl', u+'hokuspokusp']);
+                _paq.push(['setSiteId', '1']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'hokuspokusj'; s.parentNode.insertBefore(g,s);
+            })();
+        }
+	</script>
+	<!-- End Matomo Code -->
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a class="scroll-link" href="#" data-link="projects">Projects</a>
+                        </li>
+                        <li>
+                            <a class="scroll-link" href="#" data-link="contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero text-light text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <img class="hero-picture" src="images/profile.jpg"/>
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing">Vincent Will</h1>
+                        <p class="hero-paragraph is-revealing">Web-Developer from Berlin</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="features-extended section">
+                <div class="container">
+                    <div class="features-extended-inner section-inner has-top-divider">
+                        <div class="features-extended-header text-center">
+                            <div class="container-sm">
+                                <h2 class="section-title mt-0">Projects</h2>
+                                <p class="section-paragraph">A selection of my latest projects</p>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="images/tram4.png" alt="Screenshot of Tram4 Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">TraM4 Band</h3>
+                                <p>A static website for my band TraM4</p>
+                                <a href="https://tram4.de/" target="_blank" rel="noopener">> Visit Website</a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="images/igem.png" alt="Screenshot of Tram4 Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">iGem HU Berlin</h3>
+                                <p>The wiki for the iGem project of HU Berlin.</p>
+                                <a href="https://2019.igem.org/wiki/index.php?title=Team:Humboldt_Berlin" target="_blank" rel="noopener">> Visit Website</a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="images/bildderfrau.jpg" alt="Bild Der Frau Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Bild der Frau Relaunch</h3>
+                                <p>Implement the new design of the online presence of Bild der Frau during my time at the agency eThinking.</p>
+                                <a href="https://www.bildderfrau.de/" target="_blank" rel="noopener">> Visit Website</a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="images/friedhof.jpg" alt="Friedhof Weißensee Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Friedhof Weißensee</h3>
+                                <p>Set up a small wordpress page with design adaptions.</p>
+                                <a href="http://www.friedhof-weissensee.de/" target="_blank" rel="noopener">> Visit Website</a>
+                            </div>
+                        </div>
+                        <div class="feature-extended">
+                            <div class="feature-extended-image is-revealing">
+                                <img src="images/vincenius.jpg" alt="Vincenius Art Website" />
+                            </div>
+                            <div class="feature-extended-body">
+                                <h3 class="mt-0">Vincenius Art</h3>
+                                <p>Simple website for my Art Projects.</p>
+                                <a href="https://vincenius.com/" target="_blank" rel="noopener">> Visit Website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact section text-center text-light">
+                <div class="container">
+                    <div class="section-inner">
+                        <h2 class="section-title mt-0">Contact</h2>
+                        <form action="https://formspree.io/vincentwill@arcor.de" method="POST">
+                            <div class="input-container">
+                                <label for="email">E-Mail:</label>
+                                <input type="email" name="email" placeholder="Your E-Mail" required/>
+                            </div>
+
+                            <div class="input-container">
+                                <label for="text">Message:</label>
+                                <textarea rows="4" name="text" placeholder="Your Message" required></textarea>
+                            </div>
+
+                            <div class="input-container">
+                                <input type="submit" value="Send" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer-inner">
+                    <div class="brand footer-brand">
+                        <a href="/">
+                            <img src="images/logo.png" alt="Vincent Will Logo"/>
+                        </a>
+                    </div>
+                    <ul class="footer-links list-reset">
+                        <li>
+                            <a href="privacy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="https://vincenius.com">Art</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-social-links list-reset">
+                        <li>
+                            <a href="https://github.com/Vincenius" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">Github</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vincent-will-58356212a/" target="_blank" rel="noopener">
+                                <span class="screen-reader-text">LinkedIn</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:vincentwill@arcor.de">
+                                <span class="screen-reader-text">E-Mail</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-copyright">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> - Vincent Will</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
