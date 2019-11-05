@@ -50,14 +50,45 @@
                             First of all, to keep it simple, remove everything in the template of&nbsp;<code>src/components/HelloWorld.vue</code>
                             &nbsp;exept the &lt;h1&gt;.
                         </p>
-
+<pre><code class="html"><template>
+    <h1>{{ msg }}</h1>
+</template></code></pre>
                         <p>Then remove everything in <code>src/App.vue</code> template inside of app div. Then add ref="main" to the div.</p>
+
+<pre><code class="html"><template>
+    <div id="app" ref="main">
+
+    </div>
+</template></code></pre>
 
                         <h2>Dynamic Component creation</h2>
                         <p>
                             First of all we want to create the HelloWorld component dynamically. Therefor update the code in the <code>&lt;script&gt;</code>
                             block inside of your App.vue
                         </p>
+
+<pre><code class="javascript">import Vue from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'app',
+  components: {
+    HelloWorld
+  },
+  methods: {
+    init: function() {
+      const ComponentClass = Vue.extend( HelloWorld );
+      const instance = new ComponentClass({
+        propsData: { msg: 'This is a dynamic headline' }
+      });
+      instance.$mount();
+      this.$refs['main'].appendChild(instance.$el);
+    }
+  },
+  mounted() {
+    this.init();
+  }
+}</code></pre>
 
                         <p>
                             Here we added <code>import Vue from 'vue'</code> in the first line. Then we added
@@ -81,8 +112,24 @@
                         </p>
                         <p>Replace&nbsp;<code>const ComponentClass = Vue.extend( HelloWorld );</code> with this two lines:</p>
 
+<pre><code class="javascript">const component = this.$options.components['HelloWorld'];
+const ComponentClass = Vue.extend(component)</code></pre>
+
                         <p>The code should still work the same, but now we are able to use variables to choose the component we want to generate.</p>
                         <p>Next let's extract our method for the dynamic creation of components into a separate function.</p>
+
+<pre><code class="javascript">init: function() {
+  this.createComponent('HelloWorld', { msg: 'This is a dynamic headline' }, 'main');
+},
+createComponent: function(componentName, propsData, domRef) {
+  const component = this.$options.components[componentName];
+  const ComponentClass = Vue.extend(component);
+  const instance = new ComponentClass({
+    propsData // shorthand for propsData: propsData
+  });
+  instance.$mount();
+  this.$refs[domRef].appendChild(instance.$el);
+}</code></pre>
 
                         <p>
                             As you can see, we now have a function called <code>createComponent</code>, which receives the name of the
@@ -92,15 +139,60 @@
                             Now I'll add an object array after our imports, which defines how widgets are initialized.
                             In a real application this would probably be data, which is fetched from a database.
                         </p>
+
+<pre><code class="javascript">const widgets = [
+  {
+    'component': 'HelloWorld',
+    'dom': 'main',
+    'props': { msg: 'This is a dynamic headline'}
+  },
+  {
+    'component': 'HelloWorld',
+    'dom': 'main',
+    'props': { msg: 'This is a second headline'}
+  }
+]</code></pre>
+
                         <p>Afterwards we can iterate through this array in our init function to render all the Widgets:</p>
+
+<pre><code class="javascript">init: function() {
+  for (const widget of widgets) {
+    this.createComponent(widget.component, widget.props, widget.dom);
+  }
+}</code></pre>
 
                         <p>You should now be able to see both headlines defined in our widgets array.</p>
                         <p>For the last step i'll change the data a little bit to make the widgets reusable.</p>
+
+<pre><code class="javascript">const page = {
+  'main': [0, 0, 1]
+}
+const widgets = [
+  {
+    'id': 0,
+    'component': 'HelloWorld',
+    'props': { msg: 'This is a dynamic headline' }
+  },
+  {
+    'id': 1,
+    'component': 'HelloWorld',
+    'props': { msg: 'This is a second headline' }
+  }
+]</code></pre>
 
                         <p>
                             and update the init function to loop through the page object as well as the widgetIds
                             inside of each DOM reference inside of the page object.
                         </p>
+
+<pre><code class="javascript">init: function() {
+  for (let domRef in page) {
+    for (let widgetId of page[domRef]) {
+      const widget = widgets.find(widget => widget.id === widgetId);
+      this.createComponent(widget.component, widget.props, domRef);
+    }
+  }
+},</code></pre>
 
                         <p>As a final result you should see the first widget rendered two times and the second widget one time.</p>
                         <h2>Conclusion</h2>
@@ -119,6 +211,6 @@
 
         <module href="/partials/footer.html"></module>
     </div>
-    <script src="bundle.js"></script>
+    <module href="/partials/scripts.html"></module>
 </body>
 </html>

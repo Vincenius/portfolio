@@ -36,11 +36,6 @@
 
     var headerLinks = document.querySelectorAll('.scroll-link', 0);
     addScrollListener(headerLinks)
-
-    // escape html code in <code> tags
-    document.querySelectorAll("code").forEach(function(element) {
-        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-    });
 }())
 
 function addScrollListener(elements) {
@@ -77,5 +72,3 @@ function animate(elem, style, unit, from, to, time, prop) {
         elem.style[style] = from+unit;
     }
 }
-
-window.hljs.initHighlightingOnLoad();
