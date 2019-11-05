@@ -38,7 +38,7 @@
     addScrollListener(headerLinks)
 
     // escape html code in <code> tags
-    document.querySelectorAll("code").forEach(function(element) {
+    document.querySelectorAll("code.html").forEach(function(element) {
         element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
     });
 }())
