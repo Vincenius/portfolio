@@ -5,10 +5,6 @@
     margin-bottom: 160px;
 }
 
-.hero-paragraph {
-    margin-bottom: 32px;
-}
-
 .hero-picture {
     width: 100px;
     border-radius: 100%;
@@ -18,10 +14,10 @@
 @include media( '>medium' ) {
     .hero {
         padding-top: 50px;
+        margin-bottom: 260px;
     }
 
     .hero-paragraph {
-        margin-bottom: 140px;
         padding-left: 72px;
         padding-right: 72px;
     }

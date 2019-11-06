@@ -28,13 +28,5 @@ main {
 }
 
 .privacy {
-    margin-top: 500px;
     padding: 0 20px;
-}
-
-@include media( '>medium' ) {
-
-    .privacy {
-        margin-top: 640px;
-    }
 }

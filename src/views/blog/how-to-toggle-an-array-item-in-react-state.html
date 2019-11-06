@@ -15,25 +15,21 @@
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
-        <module href="/partials/header.html"></module>
+        <header class="site-header">
+            <module href="/partials/navigation.html"></module>
+
+            <div class="site-header-content hero text-light text-center container-sm">
+                <h1>How to toggle an array item with Javascript in React State</h1>
+                <p class="post__meta">
+                    <time datetime="2018-07-27T10:43">March 23, 2019 </time>
+                    By Vincent Will
+                </p>
+            </div>
+        </header>
 
         <main>
-            <section class="hero text-light text-center">
-                <div class="container-sm">
-                    <div class="hero-inner">
-                        <header class="hero__text">
-                            <h1>How to toggle an array item with Javascript in React State</h1>
-                            <p class="post__meta">
-                                <time datetime="2018-07-27T10:43">March 23, 2019 </time>
-                                By Vincent Will
-                            </p>
-                        </header>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section post-list">
-                <div class="container" style="margin-top: 250px;">
+            <section class="section post post-list">
+                <div class="container">
                     <p>In this short article I will demonstrate how to write a function to toggle array items with Javascript and inside of React state.</p>
                     <p>First of all let’s have a look how to toggle an array item with Javascript (ES6):</p>
 <pre><code class="javascript">function toggleArrayItem(arr, item) {

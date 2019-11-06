@@ -15,25 +15,21 @@
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
-        <module href="/partials/header.html"></module>
+        <header class="site-header">
+            <module href="/partials/navigation.html"></module>
+
+            <div class="site-header-content hero text-light text-center container-sm">
+                <h1>Widget based website with dynamic Vue.js components</h1>
+                <p class="post__meta">
+                    <time datetime="2018-07-27T10:43">July 27, 2018 </time>
+                    By Vincent Will
+                </p>
+            </div>
+        </header>
 
         <main>
-            <section class="hero text-light text-center">
-                <div class="container-sm">
-                    <div class="hero-inner">
-                        <header class="hero__text">
-                            <h1>Widget based website with dynamic Vue.js components</h1>
-                            <p class="post__meta">
-                                <time datetime="2018-07-27T10:43">July 27, 2018 </time>
-                                By Vincent Will
-                            </p>
-                        </header>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section post-list">
-                <div class="container" style="margin-top: 250px;">
+            <section class="section post-list post">
+                <div class="container">
                     <div class="post__entry" wfd-id="10">
                         <p>
                             In this post I will explain how to generate a webpage using dynamic Vue.js components. This could be the foundation of a CMS based on Vue.
