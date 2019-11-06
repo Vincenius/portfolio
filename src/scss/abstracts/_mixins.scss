@@ -19,6 +19,7 @@
 // Font Family
 @mixin font-family($elem) {
 	font-family: unquote(get-font-family($elem));
+	font-display: swap;
 }
 
 // Font Weight
