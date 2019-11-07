@@ -50,7 +50,7 @@ const Container = styled.h1`
 `
 
 const Home = () => (
-  <Layout>
+  <Layout title="Vincent Will | A Blog about Web-Development">
     <Container>
       <div className='hero'>
         <h1 className='title'>Welcome to Next.js!</h1>

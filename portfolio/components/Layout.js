@@ -16,6 +16,14 @@ const Layout = ({
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             <meta name="robots" content="index, follow"></meta>
         </Head>
+        <style jsx global>{`
+            body {
+                background: #000;
+                font: 11px menlo;
+                color: #fff;
+                margin: 0;
+            }
+        `}</style>
 
         <div>
             <Nav />
