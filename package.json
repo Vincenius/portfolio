@@ -53,5 +53,8 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   },
-  "main": ".eslintrc.js"
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1"
+  }
 }
