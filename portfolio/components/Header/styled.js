@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { gradient, blue, breakpoint } from '../../ui/constants'
 
 export const Container = styled.header`
     position: relative;
@@ -12,9 +13,8 @@ export const Container = styled.header`
         left: 0;
         width: 100%;
         height: 100%;
-        /* todo variables */
-        background: #0f8a9d;
-        background: linear-gradient(57deg, #00C6A7 0%, #1E4D92 100%);
+        background: ${blue};
+        background: ${gradient};
         transform-origin: 0;
         transform: skewY(-12deg);
     }
@@ -26,11 +26,10 @@ export const Content = styled.div`
     width: 100%;
     padding: 50px 24px 0;
     margin: 0 auto 260px;
-    /* todo variables */
     color: #fff;
     text-align: center;
 
-    @media (max-width: 640px) {
+    @media (max-width: ${breakpoint}) {
         margin-bottom: 160px;
     }
 
@@ -42,8 +41,7 @@ export const Content = styled.div`
         margin-top: 48px;
         margin-bottom: 16px;
 
-        /* todo variables  & animation */
-        @media (max-width: 640px) {
+        @media (max-width: ${breakpoint}) {
             font-size: 36px;
             line-height: 46px;
         }

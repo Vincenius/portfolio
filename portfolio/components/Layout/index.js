@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
-import "../ui/global.css"
-import Header from './Header'
+import "../../ui/global.css"
+import Header from '../Header'
 import * as S from './styled'
 
 class Layout extends React.Component {
@@ -32,16 +32,13 @@ class Layout extends React.Component {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="robots" content="index, follow"></meta>
-                <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto&display=swap" rel="stylesheet" />
             </Head>
+            <Header>
+                <h1>{title}</h1>
+            </Header>
 
-            <div>
-                <Header>
-                    <h1>{title}</h1>
-                </Header>
-
-                { children }
-            </div>
+            { children }
         </S.Container>)
     }
 }

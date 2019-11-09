@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoint, breakpointSmall } from './constants'
 
 export const Container = styled.div`
     max-width: 1128px;
@@ -7,28 +8,18 @@ export const Container = styled.div`
     width: 100%;
     margin: 0 auto;
 
-    ul {
-        display: inline-flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        a {
-            font-size: 13px;
-            line-height: 18px;
-            letter-spacing: 0px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.8);
-            text-transform: uppercase;
-            text-decoration: none;
-            line-height: 16px;
-            padding: 8px 24px;
-
-            &:hover {
-                color: #fff;
-            }
-        }
+    @media (max-width: ${breakpoint}) {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 `
+export const PaddingContainer = styled(Container)`
+    padding: 0 100px;
 
-// todo media query small: padding-left: 16px; padding-right: 16px;
+    @media (max-width: ${breakpoint}) {
+        padding: 0 50px;
+    }
+    @media (max-width: ${breakpointSmall}) {
+        padding: 0 20px;
+    }
+`
