@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import 'highlight.js/styles/github.css';
 
 import "../../ui/global.css"
 import Header from '../Header'
@@ -23,7 +24,13 @@ class Layout extends React.Component {
     }
 
     render() {
-        const { title, children } = this.props
+        const {
+            title,
+            children,
+            date,
+        } = this.props
+        const d = date ? new Date(date) : undefined
+
         return (<S.Container>
             <Head>
                 <title>{title} | Vincent Will</title>
@@ -36,6 +43,7 @@ class Layout extends React.Component {
             </Head>
             <Header>
                 <h1>{title}</h1>
+                <p><S.Time datetime={d.toISOString()}>{date}</S.Time> by Vincent Will</p>
             </Header>
 
             { children }
