@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { boxShadow, middleGrey, lightGrey } from '../../ui/constants'
+import { boxShadow } from '../../ui/constants'
 
 export const Container = styled.div`
     max-width: 1440px;

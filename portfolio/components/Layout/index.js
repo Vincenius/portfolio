@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import 'highlight.js/styles/github.css';
 
 import "../../ui/global.css"
+import '../../ui/code-style/github.css';
 import Header from '../Header'
 import * as S from './styled'
 
@@ -27,7 +27,11 @@ class Layout extends React.Component {
         const {
             title,
             children,
+            isArticle,
             date,
+            link,
+            image,
+            description,
         } = this.props
         const d = date ? new Date(date) : undefined
 
@@ -40,10 +44,55 @@ class Layout extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="robots" content="index, follow"></meta>
                 <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto&display=swap" rel="stylesheet" />
+
+                { isArticle &&
+                    <React.Fragment>
+                        <link rel="canonical" href={link} />
+                        <meta name="description" content={description} />
+                        <meta property="og:title" content={title} />
+                        <meta property="og:image" content={image} />
+                        <meta property="og:site_name" content="Vincent Will - Blog" />
+                        <meta property="og:description" content={description} />
+                        <meta property="og:url" content={link} />
+                        <meta property="og:type" content="article" />
+                        <script type="application/ld+json">
+                            {`
+                                '@context': "http://schema.org",
+                                "@type":"Article",
+                                "mainEntityOfPage": {
+                                    "@type": "WebPage",
+                                    "@id":"${link}"
+                                },
+                                "headline": "${title}",
+                                "datePublished":"${d.toISOString()}",
+                                "image": {
+                                    "@type":"ImageObject",
+                                    "url":"${image}",
+                                    "height":646,"width":1300
+                                },
+                                "description":"${description}",
+                                "author": {
+                                    "@type":"Person",
+                                    "name":"Vincent Will"
+                                },
+                                "publisher": {
+                                    "@type":"Organization",
+                                    "name":"Vincent Will",
+                                    "logo":{
+                                        "@type":"ImageObject",
+                                        "url":"https://vincentwill.com/images/blog/logo.png",
+                                        "height":64,
+                                        "width":64
+                                    }
+                                }
+                            `}
+                        </script>
+                    </React.Fragment>
+                }
             </Head>
             <Header>
                 <h1>{title}</h1>
-                <p><S.Time datetime={d.toISOString()}>{date}</S.Time> by Vincent Will</p>
+                { isArticle && <p><S.Time datetime={d.toISOString()}>{date}</S.Time> by Vincent Will</p> }
             </Header>
 
             { children }

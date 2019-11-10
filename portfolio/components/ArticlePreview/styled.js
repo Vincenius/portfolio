@@ -17,7 +17,6 @@ export const Headline = styled.h2`
     font-family: "Roboto Condensed",sans-serif;
     font-weight: 700;
     hyphens: manual;
-    letter-spacing: -.02rem;
     line-height: 1.2;
     margin: 0 0 16px;
 

@@ -12,6 +12,12 @@ class CodeBlock extends PureComponent {
         language: null
     };
 
+    componentDidMount() {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    }
+
     render() {
         const { language, value } = this.props;
         return (

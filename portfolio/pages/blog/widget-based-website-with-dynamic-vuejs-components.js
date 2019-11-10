@@ -8,10 +8,102 @@ const snippet1 = `<template>
     <h1>{{ msg }}</h1>
 </template>`
 
+const snippet2 = `<template>
+    <div id="app" ref="main">
+
+    </div>
+</template>`
+
+const snippet3 = `import Vue from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+name: 'app',
+components: {
+    HelloWorld
+},
+methods: {
+    init: function() {
+    const ComponentClass = Vue.extend( HelloWorld );
+    const instance = new ComponentClass({
+        propsData: { msg: 'This is a dynamic headline' }
+    });
+    instance.$mount();
+    this.$refs['main'].appendChild(instance.$el);
+    }
+},
+mounted() {
+    this.init();
+}`
+
+const snippet4 = `const component = this.$options.components['HelloWorld'];
+const ComponentClass = Vue.extend(component)`
+
+const snippet5 = `init: function() {
+    this.createComponent('HelloWorld', { msg: 'This is a dynamic headline' }, 'main');
+},
+createComponent: function(componentName, propsData, domRef) {
+    const component = this.$options.components[componentName];
+    const ComponentClass = Vue.extend(component);
+    const instance = new ComponentClass({
+        propsData // shorthand for propsData: propsData
+    });
+    instance.$mount();
+    this.$refs[domRef].appendChild(instance.$el);
+}`
+
+const snippet6 = `const widgets = [
+    {
+        'component': 'HelloWorld',
+        'dom': 'main',
+        'props': { msg: 'This is a dynamic headline'}
+    },
+    {
+        'component': 'HelloWorld',
+        'dom': 'main',
+        'props': { msg: 'This is a second headline'}
+    }
+]`
+
+const snippet7 = `init: function() {
+    for (const widget of widgets) {
+        this.createComponent(widget.component, widget.props, widget.dom);
+    }
+}`
+
+const snippet8 = `const page = {
+    'main': [0, 0, 1]
+    }
+    const widgets = [
+    {
+        'id': 0,
+        'component': 'HelloWorld',
+        'props': { msg: 'This is a dynamic headline' }
+    },
+    {
+        'id': 1,
+        'component': 'HelloWorld',
+        'props': { msg: 'This is a second headline' }
+    }
+]`
+
+const snippet9 = `init: function() {
+    for (let domRef in page) {
+        for (let widgetId of page[domRef]) {
+        const widget = widgets.find(widget => widget.id === widgetId);
+        this.createComponent(widget.component, widget.props, domRef);
+        }
+    }
+},	`
+
 const Post = () => (
     <Layout
+        isArticle={true}
         title="Widget based website with dynamic Vue.js components"
         date="July 27, 2018"
+        link="https://vincentwill.com/blog/widget-based-website-with-dynamic-vuejs-components"
+        image="https://vincentwill.com/blog/1-vue.jpg"
+        description="The best way to learn web development is by practice. But when you get started you might feel lost. There are just so many things to learn, which makes it hard to choose the right project to get started. In the following I'll share some…"
     >
         <ui.Container>
             <p>
@@ -39,18 +131,15 @@ const Post = () => (
                 &nbsp;exept the &lt;h1&gt;.
             </p>
             <CodeBlock
-                language="javascript"
+                language="html"
                 value={snippet1}
             />
             <p>Then remove everything in <code>src/App.vue</code> template inside of app div. Then add ref="main" to the div.</p>
 
-            { /* <Highlight className='html'>
-                {`<template>
-                    <div id="app" ref="main">
-
-                    </div>
-                </template>`}
-            </Highlight>*/ }
+            <CodeBlock
+                language="html"
+                value={snippet2}
+            />
 
             <h2>Dynamic Component creation</h2>
             <p>
@@ -58,28 +147,10 @@ const Post = () => (
                 block inside of your App.vue
             </p>
 
-            { /*<Highlight className='javascript'>{ `import Vue from 'vue'
-            import HelloWorld from './components/HelloWorld.vue'
-
-            export default {
-            name: 'app',
-            components: {
-                HelloWorld
-            },
-            methods: {
-                init: function() {
-                const ComponentClass = Vue.extend( HelloWorld );
-                const instance = new ComponentClass({
-                    propsData: { msg: 'This is a dynamic headline' }
-                });
-                instance.$mount();
-                this.$refs['main'].appendChild(instance.$el);
-                }
-            },
-            mounted() {
-                this.init();
-            }
-            }`}</Highlight>*/ }
+            <CodeBlock
+                language="javascript"
+                value={snippet3}
+            />
 
             <p>
                 Here we added <code>import Vue from 'vue'</code> in the first line. Then we added
@@ -103,24 +174,18 @@ const Post = () => (
             </p>
             <p>Replace&nbsp;<code>const ComponentClass = Vue.extend( HelloWorld );</code> with this two lines:</p>
 
-            { /*<Highlight className='javascript'>{`const component = this.$options.components['HelloWorld'];
-            const ComponentClass = Vue.extend(component)`}</Highlight> */ }
+            <CodeBlock
+                language="javascript"
+                value={snippet4}
+            />
 
             <p>The code should still work the same, but now we are able to use variables to choose the component we want to generate.</p>
             <p>Next let's extract our method for the dynamic creation of components into a separate function.</p>
 
-            { /*<Highlight className='javascript'>{`init: function() {
-            this.createComponent('HelloWorld', { msg: 'This is a dynamic headline' }, 'main');
-            },
-            createComponent: function(componentName, propsData, domRef) {
-            const component = this.$options.components[componentName];
-            const ComponentClass = Vue.extend(component);
-            const instance = new ComponentClass({
-                propsData // shorthand for propsData: propsData
-            });
-            instance.$mount();
-            this.$refs[domRef].appendChild(instance.$el);
-            }`}</Highlight> */ }
+            <CodeBlock
+                language="javascript"
+                value={snippet5}
+            />
 
             <p>
                 As you can see, we now have a function called <code>createComponent</code>, which receives the name of the
@@ -131,59 +196,35 @@ const Post = () => (
                 In a real application this would probably be data, which is fetched from a database.
             </p>
 
-            { /*<Highlight className='javascript'>{`const widgets = [
-            {
-                'component': 'HelloWorld',
-                'dom': 'main',
-                'props': { msg: 'This is a dynamic headline'}
-            },
-            {
-                'component': 'HelloWorld',
-                'dom': 'main',
-                'props': { msg: 'This is a second headline'}
-            }
-            ]`}</Highlight>*/ }
+            <CodeBlock
+                language="javascript"
+                value={snippet6}
+            />
 
             <p>Afterwards we can iterate through this array in our init function to render all the Widgets:</p>
 
-            { /*<Highlight className='javascript'>{`init: function() {
-                for (const widget of widgets) {
-                    this.createComponent(widget.component, widget.props, widget.dom);
-                }
-            }`}</Highlight>*/ }
+            <CodeBlock
+                language="javascript"
+                value={snippet7}
+            />
 
             <p>You should now be able to see both headlines defined in our widgets array.</p>
             <p>For the last step i'll change the data a little bit to make the widgets reusable.</p>
 
-            { /*<Highlight className='javascript'>{`const page = {
-            'main': [0, 0, 1]
-            }
-            const widgets = [
-            {
-                'id': 0,
-                'component': 'HelloWorld',
-                'props': { msg: 'This is a dynamic headline' }
-            },
-            {
-                'id': 1,
-                'component': 'HelloWorld',
-                'props': { msg: 'This is a second headline' }
-            }
-            ]`}</Highlight>*/ }
+            <CodeBlock
+                language="javascript"
+                value={snippet8}
+            />
 
             <p>
                 and update the init function to loop through the page object as well as the widgetIds
                 inside of each DOM reference inside of the page object.
             </p>
 
-            { /*<Highlight className='javascript'>{`init: function() {
-            for (let domRef in page) {
-                for (let widgetId of page[domRef]) {
-                const widget = widgets.find(widget => widget.id === widgetId);
-                this.createComponent(widget.component, widget.props, domRef);
-                }
-            }
-            },`}</Highlight>*/ }
+            <CodeBlock
+                language="javascript"
+                value={snippet9}
+            />
 
             <p>As a final result you should see the first widget rendered two times and the second widget one time.</p>
             <h2>Conclusion</h2>
