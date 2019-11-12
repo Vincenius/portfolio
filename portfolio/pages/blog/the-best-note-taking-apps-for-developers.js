@@ -1,8 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import Layout from '../../components/Layout'
-import Footer from '../../components/Footer'
-import SubscribeForm from '../../components/SubscribeForm'
+import { SubscribeForm, Footer, Layout } from '../../components'
 
 const Post = () => (
     <Layout

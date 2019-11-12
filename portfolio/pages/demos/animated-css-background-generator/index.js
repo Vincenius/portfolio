@@ -1,7 +1,6 @@
 import React from 'react'
 import * as ui from '../../../ui'
-import Layout from '../../../components/Layout'
-import Footer from '../../../components/Footer'
+import { Footer, Layout } from '../../../components'
 
 const Home = () => (
     <Layout

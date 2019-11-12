@@ -1,8 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import Layout from '../../components/Layout'
-import Footer from '../../components/Footer'
-import CodeBlock from '../../components/CodeBlock'
+import { CodeBlock, Footer, Layout } from '../../components'
 
 const snippet1 = `function toggleArrayItem(arr, item) {
     arr.includes(item)
