@@ -1,10 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { lightGrey, middleGrey, darkGrey, greenBlue } from '../../ui/constants'
 
 export const Container = styled.article`
     border-bottom: 1px solid ${lightGrey};
     margin-bottom: 3.2rem;
     padding-bottom: 3.2rem;
+`
+export const Type = styled.span`
+    font-weight: bold;
+    font-size: .82397rem;
+    line-height: 1.86667rem;
+
+    ${props => props.highlight && css`
+        b { color: ${greenBlue}; }
+    `}
 `
 export const Time = styled.time`
     color: ${middleGrey};

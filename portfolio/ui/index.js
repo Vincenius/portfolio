@@ -7,7 +7,6 @@ export const Container = styled.div`
     padding-right: 24px;
     width: 100%;
     margin: 0 auto;
-    font-size: 21px;
 
     @media (max-width: ${breakpoint}) {
         padding-left: 16px;

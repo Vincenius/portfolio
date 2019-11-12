@@ -6,13 +6,19 @@ const ArticlePreview = ({
   date,
   link,
   headline,
-  description
+  description,
+  type,
 }) => {
   const d = new Date(date)
 
   return (
     <S.Container>
       <header>
+        { type &&
+          <S.Type highlight={type==='Demo'}>
+            <b>{type}</b> -&nbsp;
+          </S.Type>
+        }
         <S.Time datetime={d.toISOString()}>{date}</S.Time>
         <S.Headline>
           <Link href={link}><a>{headline}</a></Link>

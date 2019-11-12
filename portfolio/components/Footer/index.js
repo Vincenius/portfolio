@@ -39,7 +39,7 @@ const Footer = () => (
         </S.Social>
 
         <S.FooterLinks>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="https://vincenius.com">Art</a></li>
         </S.FooterLinks>
       </S.RightFooter>
