@@ -7,6 +7,7 @@ export const Container = styled.div`
     padding-right: 24px;
     width: 100%;
     margin: 0 auto;
+    font-size: 21px;
 
     @media (max-width: ${breakpoint}) {
         padding-left: 16px;
@@ -22,4 +23,7 @@ export const PaddingContainer = styled(Container)`
     @media (max-width: ${breakpointSmall}) {
         padding: 0 20px;
     }
+`
+export const BlockLink = styled.a`
+    display: block;
 `

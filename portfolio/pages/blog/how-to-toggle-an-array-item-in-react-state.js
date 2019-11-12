@@ -26,7 +26,7 @@ const Post = () => (
         isArticle={true}
         title="How to toggle an array item with Javascript in React State"
         date="March 23, 2019"
-        link="https://vincentwill.com/blog/how-to-toggle-an-array-item-in-react-state.html"
+        link="https://vincentwill.com/blog/how-to-toggle-an-array-item-in-react-state"
         image="https://vincentwill.com/blog/2-react.jpg"
         description="In this short article I will demonstrate how to write a function to toggle array items with Javascript and inside of React state. First of all let’s have a look how to toggle an array item with Javascript (ES6): This function will get an array and…"
     >

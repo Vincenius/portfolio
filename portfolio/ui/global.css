@@ -18,3 +18,12 @@ body {
     letter-spacing: -.02rem;
     line-height: 1.2;
 }
+
+a {
+    color:#5B6F82;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
