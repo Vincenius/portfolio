@@ -4,10 +4,6 @@ import { Footer, Layout } from '../../../components'
 
 const Home = () => (
     <div>
-        <ui.Container>
-        TODO
-        </ui.Container>
-        <Footer />
     </div>
 )
 
