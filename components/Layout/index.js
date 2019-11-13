@@ -4,9 +4,7 @@ import "../../ui/global.css"
 import '../../ui/code-style/github.css';
 import { Head, Header, Footer } from '../'
 import * as S from './styled'
-function Welcome(props) {
-    return <h1>Hello, {props.name}</h1>
-}
+
 function Layout ({
     title,
     children,
