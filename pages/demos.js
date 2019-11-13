@@ -15,7 +15,6 @@ const Home = () => (
             // TODO screenshot
         />
         </ui.Container>
-        <Footer />
     </Layout>
 )
 

@@ -95,7 +95,6 @@ const Post = () => (
             </p>
             <SubscribeForm />
         </ui.Container>
-        <Footer />
     </Layout>
 )
 

@@ -267,7 +267,6 @@ const Home = () => (
                 <li>By email: vincentwill@arcor.de</li>
             </ul>
         </ui.Container>
-        <Footer />
     </Layout>
 )
 

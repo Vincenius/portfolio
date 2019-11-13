@@ -47,7 +47,6 @@ const Post = () => (
 
             <p>Since it’s not allowed to mutate the state directly, it’s not possible to just push an item to an array. So we use our function to create a new array based on the previous state. Then we’ll add this new array to the state.</p>
         </ui.Container>
-        <Footer />
     </Layout>
 )
 

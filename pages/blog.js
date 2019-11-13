@@ -32,7 +32,6 @@ const Home = () => (
             link="/blog/widget-based-website-with-dynamic-vuejs-components"
         />
         </ui.Container>
-        <Footer />
     </Layout>
 )
 

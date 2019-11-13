@@ -3,14 +3,12 @@ import * as ui from '../../../ui'
 import { Footer, Layout } from '../../../components'
 
 const Home = () => (
-    <Layout
-        title="Animated CSS Background Generator - TODO new layout"
-    >
+    <div>
         <ui.Container>
         TODO
         </ui.Container>
         <Footer />
-    </Layout>
+    </div>
 )
 
 export default Home

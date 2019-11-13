@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "highlight.js": "^9.16.2",
     "next": "9.1.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",

@@ -235,7 +235,6 @@ const Post = () => (
             </p>
             <p>Cheers,<br />Vincent</p>
         </ui.Container>
-        <Footer />
     </Layout>
 )
 
