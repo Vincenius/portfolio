@@ -11,16 +11,28 @@ function SubscribeForm(props) {
             novalidate=""
             target="_blank"
         >
-            <div id="mc_embed_signup_scroll">
-                <S.Label for="mce-EMAIL">Email:</S.Label>
-                <S.EmailInput id="mce-EMAIL" class="email" name="EMAIL" required="" type="email" placeholder="email address" />
+            <S.Wrapper id="mc_embed_signup_scroll">
+                <S.Input
+                    id="mce-EMAIL"
+                    label="E-Mail"
+                    name="EMAIL"
+                    required="true"
+                    type="email"
+                    placeholder="email address"
+                />
                 <S.HiddenInput>
                     <input tabindex="-1" name="b_23a611280baff5c6bd68c83e3_8dd07d6ca8" type="text" />
                 </S.HiddenInput>
-                <div class="clear">
-                    <S.Button id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe" />
+                <div>
+                    <S.SubmitButton
+                        id="mc-embedded-subscribe"
+                        variant="contained"
+                        type="submit"
+                    >
+                        Submit
+                    </S.SubmitButton>
                 </div>
-            </div>
+            </S.Wrapper>
         </S.Container>
     )
 }
