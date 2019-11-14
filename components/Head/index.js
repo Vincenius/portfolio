@@ -36,7 +36,7 @@ class MyHead extends React.Component {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="robots" content="index, follow"></meta>
-                <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto&display=swap" rel="stylesheet" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
                 { isArticle &&
                     <React.Fragment>
