@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components'
-// https://codepen.io/Mamboleoo/pen/BxMQYQ
 
 const animationDuration = 60;
 const move = keyframes`

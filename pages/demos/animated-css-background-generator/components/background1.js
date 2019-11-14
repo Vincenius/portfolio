@@ -1,4 +1,6 @@
 import React from 'react'
+import Slider from '@material-ui/core/Slider';
+
 import * as S from './styledBg1'
 import * as S2 from './styled'
 
@@ -56,24 +58,20 @@ class Background1 extends React.Component {
             speed,
         } = this.state
         return (
-            <S.Container
-                count={spanCount}
-                bgColor={bgColor}
-                colors={circleColors}
-                size={size}
-                speed={speed}
-            >
-                { this.buildSpans() }
-
+            <div>
                 <S2.Controls>
                     <h3>Controlls</h3>
                     <label>Count:</label>
                     <br />
-                    <input
-                        type="number"
+                    <Slider
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        min={1}
+                        max={100}
                         value={spanCount}
-                        onChange={e => this.setState({
-                            spanCount: Number(e.target.value)
+                        onChange={(event, value) => this.setState({
+                            spanCount: Number(value)
                         })}
                     />
 
@@ -113,8 +111,19 @@ class Background1 extends React.Component {
                             speed: Number(e.target.value)
                         })}
                     />
+
+                    { /* TODO add source // https://codepen.io/Mamboleoo/pen/BxMQYQ */ }
                 </S2.Controls>
-            </S.Container>
+                <S.Container
+                    count={spanCount}
+                    bgColor={bgColor}
+                    colors={circleColors}
+                    size={size}
+                    speed={speed}
+                >
+                    { this.buildSpans() }
+                </S.Container>
+            </div>
         )
     }
 }
