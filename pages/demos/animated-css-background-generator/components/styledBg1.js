@@ -17,13 +17,14 @@ function createCSS({
 
     for (let i = 0; i < count; i += 1) {
         // TODO simplify
-        const color = colors[Math.floor((Math.random() * 3))]
+        const speedValue = 500 - (speed * 10);
+        const color = colors[Math.floor((Math.random() * 3))];
         const randomTop = Math.floor((Math.random() * 100) + 1);
         const randomLeft = Math.floor((Math.random() * 100) + 1);
         const randomDuration =
-            ((Math.floor((Math.random() * speed) + 1) * 10) / 10) + 10;
+            ((Math.floor((Math.random() * speedValue) + 1) * 10) / 10) + 5;
         const randomDelay =
-        ((Math.floor((Math.random() * speed) + 1) * 10) / 10) * -1;
+        ((Math.floor((Math.random() * speedValue) + 1) * 10) / 10) * -1;
         const randomTransition1 = Math.floor((Math.random() * 50) + 1) - 25;
         const randomTransition2 = Math.floor((Math.random() * 50) + 1) - 25;
         const blurRadius = Math.random() + 0.5 * size * 0.5;

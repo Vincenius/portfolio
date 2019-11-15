@@ -15,7 +15,7 @@ class Background1 extends React.Component {
         ],
         circleInputs: 3,
         size: 20,
-        speed: 6,
+        speed: 45,
     }
 
     buildSpans = () => {
@@ -65,7 +65,7 @@ class Background1 extends React.Component {
                     <br />
                     { /* todo only re-render when finished dragging */ }
                     <Slider
-                        aria-labelledby="discrete-slider"
+                        aria-labelledby="count-slider"
                         valueLabelDisplay="auto"
                         step={1}
                         min={1}
@@ -74,13 +74,16 @@ class Background1 extends React.Component {
                         onChange={(event, value) => this.setState({
                             spanCount: Number(value)
                         })}
+                        onChangeCommitted={() => {
+                            // TODO
+                        }}
                     />
 
                     { /* todo only re-render when finished dragging */ }
                     <label>Size:</label>
                     <br />
                     <Slider
-                        aria-labelledby="discrete-slider"
+                        aria-labelledby="size-slider"
                         valueLabelDisplay="auto"
                         step={1}
                         min={1}
@@ -88,6 +91,20 @@ class Background1 extends React.Component {
                         value={size}
                         onChange={(event, value) => this.setState({
                             size: Number(value)
+                        })}
+                    />
+
+                    <label>Average Speed:</label>
+                    <br />
+                    <Slider
+                        aria-labelledby="speed-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        min={1}
+                        max={50}
+                        value={speed}
+                        onChange={(event, value) => this.setState({
+                            speed: Number(value)
                         })}
                     />
 
@@ -105,17 +122,6 @@ class Background1 extends React.Component {
                     <br />
                     { this.buildCircleInputs() }
                     { /* TODO variable color array size */ }
-
-                    <br/> <br/>
-                    <label>Speed:</label>
-                    <br />
-                    <input
-                        type="number"
-                        value={speed}
-                        onChange={e => this.setState({
-                            speed: Number(e.target.value)
-                        })}
-                    />
 
                     { /* TODO add source // https://codepen.io/Mamboleoo/pen/BxMQYQ */ }
                 </S2.Controls>

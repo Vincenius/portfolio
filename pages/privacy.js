@@ -10,9 +10,9 @@ const Home = () => (
             <h2>Honest and human readable version</h2>
             <p>
                 I try to keep my website as privacy friendly as possible.
-                I am using a self hosted version of <a href="https://matomo.org/" target="_blank" rel="noopener">Matomo</a>
-                for the only purpose to know how many people are visiting my website.<br />
-                <b>If you enable "Do Not Track" in your browser I won't track you</b>. (sadly that's not the default)
+                I am using a self hosted version of <a href="https://matomo.org/" target="_blank" rel="noopener">Matomo</a> for the only purpose of knowing how many people are visiting my website.
+            </p>
+            <p><b>If you enable "Do Not Track" in your browser I won't track you</b> (sadly that's not the default).
                 Also AdBlockers will work for blocking the tracking. I'd recomment <i>uBlock Origin</i> for that.
             </p>
             <p>
@@ -24,9 +24,11 @@ const Home = () => (
                 If you think I'm missing something here - please let me know: vincentwill@arcor.de
             </p>
 
+            <br />
             <hr />
+            <br />
 
-            <h2>Version for legal safety</h2>
+            <h2>Version for my legal safety</h2>
             <p>Effective date: May 29, 2019</p>
             <p>
                 Vincent Will ('us', 'we', or 'our') operates the
