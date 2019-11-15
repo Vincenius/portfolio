@@ -63,6 +63,7 @@ class Background1 extends React.Component {
                     <h3>Controlls</h3>
                     <label>Count:</label>
                     <br />
+                    { /* todo only re-render when finished dragging */ }
                     <Slider
                         aria-labelledby="discrete-slider"
                         valueLabelDisplay="auto"
@@ -72,6 +73,21 @@ class Background1 extends React.Component {
                         value={spanCount}
                         onChange={(event, value) => this.setState({
                             spanCount: Number(value)
+                        })}
+                    />
+
+                    { /* todo only re-render when finished dragging */ }
+                    <label>Size:</label>
+                    <br />
+                    <Slider
+                        aria-labelledby="discrete-slider"
+                        valueLabelDisplay="auto"
+                        step={1}
+                        min={1}
+                        max={50}
+                        value={size}
+                        onChange={(event, value) => this.setState({
+                            size: Number(value)
                         })}
                     />
 
@@ -89,17 +105,6 @@ class Background1 extends React.Component {
                     <br />
                     { this.buildCircleInputs() }
                     { /* TODO variable color array size */ }
-
-                    <br/> <br/>
-                    <label>Size:</label>
-                    <br />
-                    <input
-                        type="number"
-                        value={size}
-                        onChange={e => this.setState({
-                            size: Number(e.target.value)
-                        })}
-                    />
 
                     <br/> <br/>
                     <label>Speed:</label>
