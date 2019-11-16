@@ -44,9 +44,11 @@ function createCSS({
 }
 
 export const Container = styled.div`
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
     background: ${props => props.bgColor};
     overflow: hidden;
 

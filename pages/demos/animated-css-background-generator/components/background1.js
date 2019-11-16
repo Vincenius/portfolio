@@ -48,6 +48,18 @@ class Background1 extends React.Component {
         return spans
     }
 
+    generateHtmlCode = () => {
+        let htmlCode = '<div class="background">\n'
+        for (let i = 0; i < this.state.spanCount; i++) {
+            htmlCode = htmlCode + '   <span></span>\n'
+        }
+        return htmlCode + '</div>'
+    }
+
+    generateCssCode = () => {
+        // TODO
+    }
+
     buildCircleInputs = () => {
         const inputs = []
         const { circleColors } = this.state
@@ -73,9 +85,16 @@ class Background1 extends React.Component {
             size,
             speed,
         } = this.state
+
+        const htmlCode = this.generateHtmlCode()
+
         return (
             <div>
-                <Controls source="https://codepen.io/Mamboleoo/pen/BxMQYQ">
+                <Controls
+                    source="https://codepen.io/Mamboleoo/pen/BxMQYQ"
+                    credit="Louis Hoebregts"
+                    htmlCode={htmlCode}
+                >
                     <label>Count:</label>
                     <br />
                     <Slider

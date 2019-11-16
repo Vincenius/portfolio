@@ -1,12 +1,13 @@
 import styled from 'styled-components'
+import { TextareaAutosize } from '@material-ui/core';
 
 export const Container = styled.div`
-    position: absolute;
+    position: relative;
     background: rgba(0,0,0,0.8);
     color: #fff;
     margin: 20px;
     padding: 20px;
-    max-width: 300px;
+    width: 300px;
     z-index: 1;
 
     h3 {
@@ -17,7 +18,7 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: ${props => props.noMargin ? '0' : '20px'};
 `
 export const Source = styled.div`
     display: flex;
@@ -28,4 +29,8 @@ export const Source = styled.div`
     > *:first-child {
         margin-right: 20px;
     }
+`
+export const CodeArea = styled(TextareaAutosize)`
+    width: 100%;
+    margin-bottom: ${props => props.marginBottom ? '20px' : '0'};
 `
