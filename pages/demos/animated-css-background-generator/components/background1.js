@@ -57,7 +57,53 @@ class Background1 extends React.Component {
     }
 
     generateCssCode = () => {
-        // TODO
+        const {
+            spanCount,
+            circleColors,
+            size,
+            speed,
+            bgColor
+        } = this.state
+        const spanCss = S.createCSS({
+            count: spanCount,
+            colors: circleColors,
+            size,
+            speed,
+            addBgClass: true,
+        })
+
+        // TODO test export
+        // todo import stuff from styled to remove duplicate code
+        return `.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: ${bgColor};
+    overflow: hidden;
+}
+
+.background span {
+    width: ${size}vmin;
+    height: ${size}vmin;
+    border-radius: ${size}vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation-name: move;
+    animation-duration: ${speed};
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+${spanCss}
+`
     }
 
     buildCircleInputs = () => {
@@ -87,6 +133,7 @@ class Background1 extends React.Component {
         } = this.state
 
         const htmlCode = this.generateHtmlCode()
+        const cssCode = this.generateCssCode()
 
         return (
             <div>
@@ -94,6 +141,7 @@ class Background1 extends React.Component {
                     source="https://codepen.io/Mamboleoo/pen/BxMQYQ"
                     credit="Louis Hoebregts"
                     htmlCode={htmlCode}
+                    cssCode={cssCode}
                 >
                     <label>Count:</label>
                     <br />

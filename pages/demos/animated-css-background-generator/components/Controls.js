@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as S from './styledControls'
 
-const Controls = ({ children, source, credit, htmlCode }) => {
+const Controls = ({ children, source, credit, htmlCode, cssCode }) => {
     const [showControl, toggleControl] = useState(true);
     const [showCode, toggleCode] = useState(false);
 
@@ -57,7 +57,7 @@ const Controls = ({ children, source, credit, htmlCode }) => {
                     />
 
                     <span>CSS</span>
-                    <S.CodeArea rowsMax={5} />
+                    <S.CodeArea rowsMax={5} value={cssCode} />
                 </div>}
             </S.Container>
         </div>

@@ -6,11 +6,13 @@ const move = keyframes`
     }
 `
 
-function createCSS({
+// TODO add property to add .background before span
+export function createCSS({
     count,
     colors,
     size,
     speed,
+    addBgClass,
 }) {
     let styles = '';
 
@@ -29,15 +31,16 @@ function createCSS({
         const x = Math.random() < 0.5 ? -1 : 1;
         const boxShadow = size * 2 * x;
 
-        styles += ` span:nth-child(${i}) {
-            color: ${color};
-            top: ${randomTop}%;
-            left: ${randomLeft}%;
-            animation-duration: ${randomDuration}s;
-            animation-delay: ${randomDelay}s;
-            transform-origin: ${randomTransition1}vw ${randomTransition2}vh;
-            box-shadow: ${boxShadow}vmin 0 ${blurRadius}vmin currentColor;
-        }`
+        styles += `
+${addBgClass ? '.background ' : ''}span:nth-child(${i}) {
+    color: ${color};
+    top: ${randomTop}%;
+    left: ${randomLeft}%;
+    animation-duration: ${randomDuration}s;
+    animation-delay: ${randomDelay}s;
+    transform-origin: ${randomTransition1}vw ${randomTransition2}vh;
+    box-shadow: ${boxShadow}vmin 0 ${blurRadius}vmin currentColor;
+}`
     }
 
     return css`${styles}`;
