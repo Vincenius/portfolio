@@ -1,6 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
 
-const animationDuration = 60;
 const move = keyframes`
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -16,9 +15,8 @@ function createCSS({
     let styles = '';
 
     for (let i = 0; i < count; i += 1) {
-        // TODO simplify
         const speedValue = 500 - (speed * 10);
-        const color = colors[Math.floor((Math.random() * 3))];
+        const color = colors[Math.floor((Math.random() * colors.length))];
         const randomTop = Math.floor((Math.random() * 100) + 1);
         const randomLeft = Math.floor((Math.random() * 100) + 1);
         const randomDuration =

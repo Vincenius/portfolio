@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from '@material-ui/core/Slider';
 
 import * as S from './styledBg1'
-import * as S2 from './styled'
+import Controls from './Controls'
 
 class Background1 extends React.Component {
     state = {
@@ -13,9 +13,24 @@ class Background1 extends React.Component {
             '#E45A84',
             '#FFACAC',
         ],
-        circleInputs: 3,
         size: 20,
         speed: 45,
+    }
+
+    removeColor = () => {
+        const { circleColors } = this.state
+        const arr = circleColors.slice(0,-1)
+        this.setState({
+            circleColors: arr,
+        })
+    }
+    addColor = () => {
+        const { circleColors } = this.state
+        const randomColor = "#"+((1<<24)*Math.random()|0).toString(16)
+        const arr = [...circleColors, randomColor]
+        this.setState({
+            circleColors: arr,
+        })
     }
 
     buildSpans = () => {
@@ -35,9 +50,10 @@ class Background1 extends React.Component {
 
     buildCircleInputs = () => {
         const inputs = []
-        const { circleInputs, circleColors } = this.state
-        for (let i = 0; i < circleInputs; i++) {
+        const { circleColors } = this.state
+        for (let i = 0; i < circleColors.length; i++) {
             inputs.push(<input
+                key={`input-${i}`}
                 type="color"
                 value={circleColors[i]}
                 onChange={e => {
@@ -59,27 +75,21 @@ class Background1 extends React.Component {
         } = this.state
         return (
             <div>
-                <S2.Controls>
-                    <h3>Controlls</h3>
+                <Controls source="https://codepen.io/Mamboleoo/pen/BxMQYQ">
                     <label>Count:</label>
                     <br />
-                    { /* todo only re-render when finished dragging */ }
                     <Slider
                         aria-labelledby="count-slider"
                         valueLabelDisplay="auto"
                         step={1}
                         min={1}
-                        max={100}
+                        max={50}
                         value={spanCount}
                         onChange={(event, value) => this.setState({
                             spanCount: Number(value)
                         })}
-                        onChangeCommitted={() => {
-                            // TODO
-                        }}
                     />
 
-                    { /* todo only re-render when finished dragging */ }
                     <label>Size:</label>
                     <br />
                     <Slider
@@ -121,10 +131,18 @@ class Background1 extends React.Component {
                     <label>Circle Colors:</label>
                     <br />
                     { this.buildCircleInputs() }
-                    { /* TODO variable color array size */ }
-
-                    { /* TODO add source // https://codepen.io/Mamboleoo/pen/BxMQYQ */ }
-                </S2.Controls>
+                    <br />
+                    { circleColors.length > 1 &&
+                        <button onClick={this.removeColor}>
+                            -
+                        </button>
+                    }
+                    { circleColors.length < 8 &&
+                        <button onClick={this.addColor}>
+                            +
+                        </button>
+                    }
+                </Controls>
                 <S.Container
                     count={spanCount}
                     bgColor={bgColor}
