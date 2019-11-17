@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { TextareaAutosize } from '@material-ui/core';
 
 export const Container = styled.div`
@@ -19,6 +19,11 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     margin-bottom: ${props => props.noMargin ? '0' : '20px'};
+
+    svg {
+        font-size: 18px;
+        cursor: pointer;
+    }
 `
 export const Source = styled.div`
     display: flex;
@@ -33,4 +38,18 @@ export const Source = styled.div`
 export const CodeArea = styled(TextareaAutosize)`
     width: 100%;
     margin-bottom: ${props => props.marginBottom ? '20px' : '0'};
+`
+export const Copied = styled.span`
+    display: inline-block;
+    padding: 4px;
+    margin-right: 5px;
+    background: rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.6);
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    ${props => props.visible && css`
+        opacity: 1;
+    `}
 `

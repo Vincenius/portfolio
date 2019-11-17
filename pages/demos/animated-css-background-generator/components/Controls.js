@@ -1,14 +1,29 @@
 import React, { useState } from 'react'
+import FileCopyIcon from '@material-ui/icons/FileCopy';
 import * as S from './styledControls'
 
 const Controls = ({ children, source, credit, htmlCode, cssCode }) => {
     const [showControl, toggleControl] = useState(true);
     const [showCode, toggleCode] = useState(false);
+    const [copiedCode, showCopied] = useState('')
+
+    let htmlTextArea = React.createRef()
+    let cssTextArea = React.createRef()
+
+    const copyToClipboard = (textArea, areaName) => {
+        textArea.current.select()
+        document.execCommand('copy')
+        showCopied(areaName)
+
+        setTimeout( () => {
+            showCopied('')
+        }, 2000);
+    }
 
     return (
         <div>
             <S.Container>
-                <S.Header>
+                <S.Header noMargin={false}>
                     <h3>Controls</h3>
                     <a
                         onClick={e => {
@@ -49,15 +64,33 @@ const Controls = ({ children, source, credit, htmlCode, cssCode }) => {
                 </S.Header>
 
                 { showCode && <div>
-                    <span>HTML</span>
+                    <S.Header noMargin={true}>
+                        <span>HTML</span>
+                        <div>
+                            <S.Copied visible={copiedCode === 'html'}>copied</S.Copied>
+                            <FileCopyIcon onClick={() => copyToClipboard(htmlTextArea, 'html')} />
+                        </div>
+                    </S.Header>
+
                     <S.CodeArea
                         value={htmlCode}
                         rowsMax={5}
                         marginBottom={true}
+                        ref={htmlTextArea}
                     />
 
-                    <span>CSS</span>
-                    <S.CodeArea rowsMax={5} value={cssCode} />
+                    <S.Header noMargin={true}>
+                        <span>CSS</span>
+                        <div>
+                            <S.Copied visible={copiedCode === 'css'}>copied</S.Copied>
+                            <FileCopyIcon onClick={() => copyToClipboard(cssTextArea, 'css')} />
+                        </div>
+                    </S.Header>
+                    <S.CodeArea
+                        rowsMax={5}
+                        value={cssCode}
+                        ref={cssTextArea}
+                    />
                 </div>}
             </S.Container>
         </div>

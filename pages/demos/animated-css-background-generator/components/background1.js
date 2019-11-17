@@ -71,30 +71,13 @@ class Background1 extends React.Component {
             speed,
             addBgClass: true,
         })
+        const backgroundCss = `.background { ${S.backgroundCss({ bgColor })} }`
+        const allSpanCss = `.background span { ${S.spanCss({ size, speed, addAnimation: true })}}`
 
-        // TODO test export
         // todo import stuff from styled to remove duplicate code
-        return `.background {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: ${bgColor};
-    overflow: hidden;
-}
+        return `${backgroundCss}
 
-.background span {
-    width: ${size}vmin;
-    height: ${size}vmin;
-    border-radius: ${size}vmin;
-    backface-visibility: hidden;
-    position: absolute;
-    animation-name: move;
-    animation-duration: ${speed};
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
+${allSpanCss}
 
 @keyframes move {
     100% {

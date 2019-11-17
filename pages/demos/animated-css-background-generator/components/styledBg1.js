@@ -46,26 +46,36 @@ ${addBgClass ? '.background ' : ''}span:nth-child(${i}) {
     return css`${styles}`;
 }
 
-export const Container = styled.div`
+export const backgroundCss = ({ bgColor }) =>
+`
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background: ${props => props.bgColor};
+    background: ${bgColor};
     overflow: hidden;
+`
 
+export const spanCss = ({ size, speed, addAnimation }) =>
+`
+    width: ${size}vmin;
+    height: ${size}vmin;
+    border-radius: ${size}vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    ${addAnimation ? 'animation: move;' : ''}
+    animation-duration: ${speed};
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+`
+
+export const Container = styled.div`
+    ${props => backgroundCss(props)}
     ${props => createCSS(props)}
 `
 
 export const Span = styled.span`
-    width: ${props => props.size}vmin;
-    height: ${props => props.size}vmin;
-    border-radius: ${props => props.size}vmin;
-    backface-visibility: hidden;
-    position: absolute;
+    ${props => spanCss(props)}
     animation-name: ${move};
-    animation-duration: ${props => props.speed};
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 `
