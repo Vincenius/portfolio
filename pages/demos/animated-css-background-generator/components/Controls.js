@@ -23,7 +23,7 @@ const Controls = ({ children, source, credit, htmlCode, cssCode }) => {
     return (
         <div>
             <S.Container>
-                <S.Header noMargin={false}>
+                <S.Header noMargin={!showControl}>
                     <h3>Controls</h3>
                     <a
                         onClick={e => {
@@ -38,15 +38,15 @@ const Controls = ({ children, source, credit, htmlCode, cssCode }) => {
                 </S.Header>
 
                 { showControl && children }
-
-                <S.Source>
+                { showControl && <S.Source>
                     <span>
                         Credit: {credit}
                     </span>
                     <a href={source} target="_blank" rel="noopener">
                         Source
                     </a>
-                </S.Source>
+                </S.Source> }
+
             </S.Container>
             <S.Container>
                 <S.Header noMargin={!showCode}>
