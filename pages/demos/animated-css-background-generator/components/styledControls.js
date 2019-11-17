@@ -7,7 +7,7 @@ export const Container = styled.div`
     color: #fff;
     margin: 20px;
     padding: 20px;
-    width: 300px;
+    max-width: 300px;
     z-index: 1;
 
     h3 {
