@@ -15,7 +15,7 @@ const ArticlePreview = ({
     <S.Container>
       <header>
         { type &&
-          <S.Type highlight={type==='Demo'}>
+          <S.Type highlight={type==='Resource'}>
             <b>{type}</b> -&nbsp;
           </S.Type>
         }

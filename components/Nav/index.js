@@ -6,7 +6,7 @@ import * as S from './styled'
 const links = [
   // { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/demos', label: 'Demos' }
+  { href: '/resources', label: 'Resources' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link

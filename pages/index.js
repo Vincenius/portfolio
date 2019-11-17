@@ -8,11 +8,11 @@ const Home = () => (
   >
     <ui.Container>
       <ArticlePreview
-        type="Demo"
+        type="Resource"
         date="November 12, 2019"
         headline="Animated CSS Background Generator"
         description="A collection of pure css animated backgrounds with the possibility to customize."
-        link="/demos/animated-css-background-generator"
+        link="/resources/animated-css-background-generator"
         // TODO screenshot
       />
       <ArticlePreview
