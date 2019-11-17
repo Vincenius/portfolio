@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Head } from '../../../components'
-import { Background1, Background2 } from './components'
+import { Background1, Background2, Background3, Background4 } from './components'
 import * as S from './styled'
 
 const Demo = () => {
@@ -29,10 +29,24 @@ const Demo = () => {
                 >
                     Demo 2
                 </a>
+                <a
+                    onClick={() => changeBg(2)}
+                    className={activeBg === 2 ? 'active' : ''}
+                >
+                    Demo 3
+                </a>
+                <a
+                    onClick={() => changeBg(3)}
+                    className={activeBg === 4 ? 'active' : ''}
+                >
+                    Demo 4
+                </a>
             </S.Navigation>
 
             { activeBg === 0 && <Background1 /> }
             { activeBg === 1 && <Background2 /> }
+            { activeBg === 2 && <Background3 /> }
+            { activeBg === 3 && <Background4 /> }
         </S.Container>
     )
 }
