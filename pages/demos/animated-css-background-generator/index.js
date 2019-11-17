@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Head } from '../../../components'
-import { Background1 } from './components'
+import { Background1, Background2 } from './components'
 import * as S from './styled'
 
 const Demo = () => {
@@ -32,6 +32,7 @@ const Demo = () => {
             </S.Navigation>
 
             { activeBg === 0 && <Background1 /> }
+            { activeBg === 1 && <Background2 /> }
         </S.Container>
     )
 }

@@ -16,7 +16,7 @@ export const Navigation = styled.nav`
             margin-left: 0;
         }
 
-        &.active {
+        &.active, &:hover {
             text-decoration: underline;
         }
     }
