@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components'
 
-export function createCSS({ addBgClass }) {
+export function createCSS({ addBgClass, count, size }) {
     let styles = '';
-    const count = 10;
 
     for (let i = 0; i < count; i += 1) {
         const randomLeft = Math.floor(Math.random() * 90);
-        const randomSize = Math.floor((Math.random() * 100) + 100);
-        const randomDelay = Math.floor((Math.random() * (i * 10)) + 1);
+        const randomSize = Math.floor((Math.random() * (size[1] - size[0])) + size[0]);
+        const randomDelay = Math.floor((Math.random() * (i * 5)) + 1);
 
         styles += `
 ${addBgClass ? '.background ' : ''}li:nth-child(${i}) {
@@ -42,7 +41,7 @@ export const Container = styled.ul`
         width: 20px;
         height: 20px;
         background: rgba(255, 255, 255, 0.2);
-        animation: animate 25s linear infinite;
+        animation: animate ${props => 51 - props.speed}s linear infinite;
     }
 
     ${props => createCSS(props)}

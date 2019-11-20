@@ -127,7 +127,6 @@ ${spanCss}
                     cssCode={cssCode}
                 >
                     <label>Count:</label>
-                    <br />
                     <Slider
                         aria-labelledby="count-slider"
                         valueLabelDisplay="auto"
@@ -141,7 +140,6 @@ ${spanCss}
                     />
 
                     <label>Size:</label>
-                    <br />
                     <Slider
                         aria-labelledby="size-slider"
                         valueLabelDisplay="auto"
@@ -155,7 +153,6 @@ ${spanCss}
                     />
 
                     <label>Average Speed:</label>
-                    <br />
                     <Slider
                         aria-labelledby="speed-slider"
                         valueLabelDisplay="auto"
@@ -168,18 +165,14 @@ ${spanCss}
                         })}
                     />
 
-                    <br /><br />
                     <label>Background Color:</label>
-                    <br />
                     <input
                         type="color"
                         value={bgColor}
                         onChange={e => this.setState({ bgColor: e.target.value })}
                     />
 
-                    <br /><br />
                     <label>Circle Colors:</label>
-                    <br />
                     { this.buildCircleInputs() }
                     <br />
                     { circleColors.length > 1 &&

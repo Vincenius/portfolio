@@ -13,6 +13,10 @@ export const Container = styled.div`
     h3 {
         margin: 0;
     }
+    label {
+        display: block;
+        margin: 10px 0 0;
+    }
 `
 export const Header = styled.header`
     display: flex;
