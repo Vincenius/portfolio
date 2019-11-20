@@ -14,7 +14,16 @@ class Background2 extends React.Component {
                 </Controls>
 
                 <S.Container>
-                    TODO
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </S.Container>
             </div>
         )
