@@ -67,7 +67,7 @@ const Post = () => (
                 link="https://roadmap.sh/roadmaps"
                 image="https://roadmap.sh/static/brand.png"
             />
-            { /* TODO <SubscribeForm /> */ }
+            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
     </Layout>
 )

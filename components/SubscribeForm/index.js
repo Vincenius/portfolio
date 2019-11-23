@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styled'
 
-function SubscribeForm(props) {
+function SubscribeForm({ text }) {
     return (
         <S.Container
             id="mc-embedded-subscribe-form"
@@ -12,6 +12,9 @@ function SubscribeForm(props) {
             target="_blank"
         >
             <S.Wrapper id="mc_embed_signup_scroll">
+                { text && <S.Text>
+                    {text}
+                </S.Text>}
                 <S.Input
                     id="mce-EMAIL"
                     label="E-Mail"
@@ -29,7 +32,7 @@ function SubscribeForm(props) {
                         variant="contained"
                         type="submit"
                     >
-                        Submit
+                        Subscribe
                     </S.SubmitButton>
                 </div>
             </S.Wrapper>
