@@ -61,10 +61,13 @@ export const RightFooter = styled.div`
 `
 export const FooterLinks = styled.ul`
     list-style: none;
-    margin: 0;
 
-    li:first-child {
+    li {
         margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     a {

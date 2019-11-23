@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components'
 
+export const Container = styled.ul`
+    ${props => backgroundCss(props)}
+    ${props => generalCss(props)}
+    ${props => createCSS(props)}
+`
+
 export function createCSS({ addBgClass, count, size }) {
     let styles = '';
 
@@ -21,8 +27,34 @@ ${addBgClass ? '.background ' : ''}li:nth-child(${i}) {
     return css`${styles}`;
 }
 
+export const generalCss = ({ speed }) => {
+    return `li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate ${54 - speed}s linear infinite;
+}
 
-export const Container = styled.ul`
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+`
+}
+
+export const backgroundCss = ({bgColor}) => {
+    return `
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -30,32 +62,7 @@ export const Container = styled.ul`
     left: 0;
     margin: 0;
     padding: 0;
-    background: #4e54c8;
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    background: ${bgColor};
     overflow: hidden;
-
-    li {
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        animation: animate ${props => 51 - props.speed}s linear infinite;
-    }
-
-    ${props => createCSS(props)}
-
-    @keyframes animate {
-        0%{
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-            border-radius: 0;
-        }
-        100%{
-            transform: translateY(-1000px) rotate(720deg);
-            opacity: 0;
-            border-radius: 50%;
-        }
-    }
 `
+}

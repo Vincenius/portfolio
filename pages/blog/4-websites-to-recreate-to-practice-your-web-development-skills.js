@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Footer, Layout } from '../../components'
+import { SubscribeForm, Layout } from '../../components'
 
 const snippet1 = `function toggleArrayItem(arr, item) {
     arr.includes(item)

@@ -7,6 +7,7 @@ import * as S from './styledBg2'
 class Background2 extends React.Component {
     // TODO background
     state = {
+        bgColor: '#4e54c8',
         count: 10,
         size: [100, 200],
         speed: 25,
@@ -24,18 +25,49 @@ class Background2 extends React.Component {
         return items
     }
 
-    render() {
+    generateHtmlCode = () => {
+        let htmlCode = '<ul class="background">\n'
+        for (let i = 0; i < this.state.count; i++) {
+            htmlCode = htmlCode + '   <li></li>\n'
+        }
+        return htmlCode + '</ul>'
+    }
+
+    generateCssCode = () => {
         const {
+            bgColor,
             count,
             size,
             speed,
         } = this.state
+
+        const backgroundCss = `.background { ${S.backgroundCss({ bgColor })} }`
+        const generalCss = `.background ${ S.generalCss({ speed }) }`
+        const liCss = `${S.createCSS({ addBgClass: true, count, size })}`
+
+        return `${backgroundCss}
+${generalCss}
+${liCss}`
+    }
+
+    render() {
+        const {
+            bgColor,
+            count,
+            size,
+            speed,
+        } = this.state
+
+        const htmlCode = this.generateHtmlCode()
+        const cssCode = this.generateCssCode()
 
         return (
             <div>
                 <Controls
                     source="https://codepen.io/mohaiman/pen/MQqMyo"
                     credit="Mohammad Abdul Mohaiman"
+                    htmlCode={htmlCode}
+                    cssCode={cssCode}
                 >
                     <label>Count:</label>
                     <Slider
@@ -75,12 +107,20 @@ class Background2 extends React.Component {
                             speed: Number(value)
                         })}
                     />
+
+                    <label>Background Color:</label>
+                    <input
+                        type="color"
+                        value={bgColor}
+                        onChange={e => this.setState({ bgColor: e.target.value })}
+                    />
                 </Controls>
 
                 <S.Container
                     count={count}
                     size={size}
                     speed={speed}
+                    bgColor={bgColor}
                 >
                     { this.buildList() }
                 </S.Container>

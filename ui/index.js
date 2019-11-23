@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoint, breakpointSmall } from './constants'
+import { breakpoint, breakpointSmall, breakpointLarge } from './constants'
 
 export const Container = styled.div`
     max-width: 1128px;
@@ -25,4 +25,49 @@ export const PaddingContainer = styled(Container)`
 `
 export const BlockLink = styled.a`
     display: block;
+`
+export const SidebarContainer = styled.div`
+    display: flex;
+
+    @media (max-width: ${breakpointLarge}) {
+        flex-direction: column;
+    }
+`
+export const Sidebar = styled.aside`
+    width: 100%;
+    max-width: 300px;
+    margin-left: 50px;
+
+    @media (max-width: ${breakpointLarge}) {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    h2 {
+        margin: 6px 0 16px;
+    }
+`
+
+export const SidebarContent = styled.aside`
+    @media (max-width: ${breakpointLarge}) {
+        display: flex;
+    }
+
+    @media (max-width: ${breakpoint}) {
+        flex-direction: column;
+    }
+
+    > * {
+        @media (max-width: ${breakpointLarge}) {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: ${breakpoint}) {
+            margin-right: 0
+        }
+    }
 `

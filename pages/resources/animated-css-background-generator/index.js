@@ -4,7 +4,7 @@ import { Background1, Background2, Background3, Background4 } from './components
 import * as S from './styled'
 
 const Demo = () => {
-    const [activeBg, changeBg] = useState(1);
+    const [activeBg, changeBg] = useState(2);
     return (
         <S.Container>
             <Head

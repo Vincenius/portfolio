@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpointSmall } from '../../ui/constants'
 
 export const Navigation = styled.nav`
     position: relative;
@@ -6,11 +7,21 @@ export const Navigation = styled.nav`
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: ${breakpointSmall}) {
+        flex-direction: column;
+    }
+
     ul {
         display: inline-flex;
         list-style: none;
         padding: 0;
         margin: 0;
+
+        @media (max-width: ${breakpointSmall}) {
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         a {
             font-size: 13px;
@@ -23,6 +34,10 @@ export const Navigation = styled.nav`
             line-height: 16px;
             padding: 8px 24px;
 
+            @media (max-width: ${breakpointSmall}) {
+                line-height: 32px;
+            }
+
             &:hover {
                 color: #fff;
             }
@@ -30,6 +45,10 @@ export const Navigation = styled.nav`
 
         li:last-child a {
             padding-right: 0;
+
+            @media (max-width: ${breakpointSmall}) {
+                padding-right: 24px;
+            }
         }
     }
 `

@@ -10,3 +10,4 @@ export const boxShadow = '0 16px 48px #E3E7EB'
 export const gradient = `linear-gradient(57deg, ${greenBlue} 0%, ${blue} 100%)`
 export const breakpoint = '640px'
 export const breakpointSmall = '480px'
+export const breakpointLarge = '960px';
