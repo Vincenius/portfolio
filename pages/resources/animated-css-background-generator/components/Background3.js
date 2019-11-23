@@ -8,7 +8,7 @@ class Background2 extends React.Component {
     state = {
         bgColor: '#0040C1',
         count: 6,
-        speed: 12,
+        speed: 16,
     }
 
     generateHtmlCode = () => {

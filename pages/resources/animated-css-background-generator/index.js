@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { Head } from '../../../components'
-import { Background1, Background2, Background3, Background4 } from './components'
+import { Background1, Background2, Background3 } from './components'
 import * as S from './styled'
 
 const Demo = () => {
-    const [activeBg, changeBg] = useState(2);
+    const [activeBg, changeBg] = useState(0);
     return (
         <S.Container>
             <Head
@@ -35,18 +36,15 @@ const Demo = () => {
                 >
                     Demo 3
                 </a>
-                <a
-                    onClick={() => changeBg(3)}
-                    className={activeBg === 4 ? 'active' : ''}
-                >
-                    Demo 4
-                </a>
             </S.Navigation>
 
             { activeBg === 0 && <Background1 /> }
             { activeBg === 1 && <Background2 /> }
             { activeBg === 2 && <Background3 /> }
-            { activeBg === 3 && <Background4 /> }
+
+            <S.Footer>
+                Made by <Link href="/"><a>Vincent Will</a></Link>
+            </S.Footer>
         </S.Container>
     )
 }

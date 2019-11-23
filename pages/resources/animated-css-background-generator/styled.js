@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Container = styled.div``
+export const Container = styled.div`
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+`
 export const Navigation = styled.nav`
     position: relative;
     z-index: 2;
@@ -19,5 +23,17 @@ export const Navigation = styled.nav`
         &.active, &:hover {
             text-decoration: underline;
         }
+    }
+`
+export const Footer = styled.footer`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 20px;
+    color: #fff;
+    letter-spacing: 0rem;
+
+    a {
+        color: #fff;
     }
 `

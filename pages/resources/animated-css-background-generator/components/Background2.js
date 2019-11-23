@@ -10,7 +10,7 @@ class Background2 extends React.Component {
         bgColor: '#4e54c8',
         count: 10,
         size: [100, 200],
-        speed: 25,
+        speed: 35,
     }
 
     buildList = () => {
