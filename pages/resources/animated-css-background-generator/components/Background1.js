@@ -74,7 +74,6 @@ class Background1 extends React.Component {
         const backgroundCss = `.background { ${S.backgroundCss({ bgColor })} }`
         const allSpanCss = `.background span { ${S.spanCss({ size, speed, addAnimation: true })}}`
 
-        // todo import stuff from styled to remove duplicate code
         return `${backgroundCss}
 
 ${allSpanCss}

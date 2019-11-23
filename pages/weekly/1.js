@@ -7,9 +7,9 @@ const Post = () => (
         isArticle={true}
         title="Weekly web development update from 27th November 2019"
         date="November 27, 2019"
-        link="https://vincentwill.com/blog/4-websites-to-recreate-to-practice-your-web-development-skills"
-        image="https://vincentwill.com/blog/4-duckduckgo.png"
-        description="TODO"
+        link="https://vincentwill.com/weekly/1"
+        image="/resources/resources01.jpg"
+        description="SWR, Fresh Folk, Colors & fonts, Animated CSS Backgrounds, Postwoman, Pika and more"
     >
         <S.IntroText>
             <p>
@@ -31,10 +31,10 @@ const Post = () => (
                 image="https://assets.zeit.co/image/upload/v1572282926/swr/twitter-card.jpg"
             />
             <LinkBox
-                title="Fresh Folk - An illustration library of people and objects"
-                description="Each character comes with a range of poses, outfits and skin tones. Create a wide range of scenes with 43 Objects to choose from."
-                link="https://fresh-folk.com/"
-                image="http://fresh-folk.com/assets/images/card.jpg?v51183319899651"
+                title="Colors, fonts and resources for web developers"
+                description="Curated library of colors and fonts for Web Developers & Digital Designers and a curated collection of resources."
+                link="https://www.colorsandfonts.com/"
+                image="https://colorsandfonts.com/images/opengraph.png"
             />
             <LinkBox
                 title="Animated CSS Background Generator"
@@ -42,6 +42,12 @@ const Post = () => (
                 link="/resources/animated-css-background-generator"
                 image="/resources/resources01-small.jpg"
                 selfPromoted={true}
+            />
+            <LinkBox
+                title="Fresh Folk - An illustration library of people and objects"
+                description="Each character comes with a range of poses, outfits and skin tones. Create a wide range of scenes with 43 Objects to choose from."
+                link="https://fresh-folk.com/"
+                image="http://fresh-folk.com/assets/images/card.jpg?v51183319899651"
             />
             <LinkBox
                 title="Postwoman - An API request builder"
@@ -54,12 +60,6 @@ const Post = () => (
                 description="It handles formatting, configuring, building and publishing every package on the registry, so that individual authors don't have to."
                 link="https://www.pika.dev/registry"
                 image="https://www.pika.dev/static/img/registry-cover.jpg"
-            />
-            <LinkBox
-                title="Colors, fonts and resources for web developers"
-                description="Curated library of colors and fonts for Web Developers & Digital Designers and a curated collection of resources."
-                link="https://www.colorsandfonts.com/"
-                image="https://colorsandfonts.com/images/opengraph.png"
             />
             <LinkBox
                 title="Developer Roadmaps"

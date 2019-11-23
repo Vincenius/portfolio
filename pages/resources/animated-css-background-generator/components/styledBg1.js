@@ -6,7 +6,6 @@ const move = keyframes`
     }
 `
 
-// TODO add property to add .background before span
 export function createCSS({
     count,
     colors,

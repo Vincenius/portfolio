@@ -11,9 +11,9 @@ const Demo = () => {
             <Head
                 title="Animated CSS Background Generator"
                 link="https://vincentwill.com/demos/animated-css-background-generator"
-                image="TODO"
+                image="/resources/resources01.jpg"
                 description="A collection of pure css animated backgrounds with the possibility to customize"
-                // TODO date={d}
+                date={new Date('November 27, 2019')}
                 isArticle={true}
             />
 

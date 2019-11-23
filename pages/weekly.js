@@ -10,7 +10,7 @@ const Home = () => (
             <WeeklyPreview
                 number="1"
                 date="November 27, 2019"
-                description="TODO summary."
+                description="SWR, Fresh Folk, Colors & fonts, Animated CSS Backgrounds, Postwoman, Pika and more.."
             />
         </S.Container>
     </Layout>

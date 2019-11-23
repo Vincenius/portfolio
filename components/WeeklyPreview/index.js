@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import ArrowRight from '@material-ui/icons/ArrowRightAlt';
 import * as S from './styled'
 
 const ArticlePreview = ({
@@ -24,6 +25,11 @@ const ArticlePreview = ({
                 <S.Image src={img} alt={`number image ${number}`} />
             </a></Link>
             <p>{description}</p>
+            <Link href={link}>
+                <S.ReadMore>
+                Open Weekly <ArrowRight />
+                </S.ReadMore>
+            </Link>
         </S.Container>
     )
 }

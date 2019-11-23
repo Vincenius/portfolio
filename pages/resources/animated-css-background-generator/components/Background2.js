@@ -5,7 +5,6 @@ import Slider from '@material-ui/core/Slider';
 import * as S from './styledBg2'
 
 class Background2 extends React.Component {
-    // TODO background
     state = {
         bgColor: '#4e54c8',
         count: 10,

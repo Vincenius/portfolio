@@ -12,7 +12,7 @@ const Home = () => (
           <h2>Latest Articles & Resources</h2>
           <ArticlePreview
             type="Resource"
-            date="November 12, 2019"
+            date="November 27, 2019"
             headline="Animated CSS Background Generator"
             description="A collection of pure css animated backgrounds with the possibility to customize."
             link="/resources/animated-css-background-generator"
@@ -53,7 +53,7 @@ const Home = () => (
             <WeeklyPreview
               number="1"
               date="November 27, 2019"
-              description="TODO summary."
+              description="SWR, Fresh Folk, Colors & fonts, Animated CSS Backgrounds, Postwoman, Pika and more.."
             />
           </ui.SidebarContent>
         </ui.Sidebar>

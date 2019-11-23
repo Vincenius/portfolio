@@ -39,16 +39,13 @@ export const Headline = styled.h3`
     }
 `
 export const ReadMore = styled.a`
-    display: block;
-    font-size: .77248rem;
-    font-weight: 700;
-    margin-top: calc(1.06667rem + .25vw);
-    text-transform: uppercase;
-    color: ${greenBlue};
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
 
     &:hover {
-        color: ${darkGrey};
-        text-decoration: underline;
+        color: ${greenBlue};
+        text-decoration: none;
         cursor: pointer;
     }
 `
