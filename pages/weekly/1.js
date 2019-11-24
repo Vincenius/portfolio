@@ -13,14 +13,14 @@ const Post = () => (
     >
         <S.IntroText>
             <p>
-                Today I'm introducing the weekly. This will be a curated list of things I stubmled upon during the previous week.
+                Today I'm introducing the weekly. This will be a curated list of things I stumbled upon during the previous week.
             </p>
             <p>
                 I'm reading through lots of various forums and websites related to web development.
-                Starting from now I will save the (for me) most interesting resources, tools and reads and will publish them here.
+                Starting from now I will save the (for me) most interesting resources, tools and reads and will share them here.
             </p>
             <p>
-            If you have somthing, you think I should mention here, let me know: <a href="mailto:vincentwill@arcor.de">vincentwill@arcor.de</a>
+                If you have somthing, you think I should mention here, let me know: <a href="mailto:vincentwill@arcor.de">vincentwill@arcor.de</a>
             </p>
         </S.IntroText>
         <S.Container>
@@ -66,6 +66,12 @@ const Post = () => (
                 description="Step by step guides and paths to learn different tools or technologies."
                 link="https://roadmap.sh/roadmaps"
                 image="https://roadmap.sh/static/brand.png"
+            />
+            <LinkBox
+                title="Firefox Developer Tools Tips & Tricks"
+                description="Curated series of 30 productivity tips and tricks that helps debugging web applications with the Firefox Developer Tools."
+                link="https://medium.com/@lakatos/30-tips-tricks-with-the-firefox-developer-tools-2e3f2ca5bc61"
+                image="https://miro.medium.com/max/1200/1*eN9nIfutJQUr5kdznmEHDQ.png"
             />
             <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
