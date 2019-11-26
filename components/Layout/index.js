@@ -31,7 +31,9 @@ function Layout ({
                 { isArticle && <p><S.Time datetime={d.toISOString()}>{date}</S.Time> by Vincent Will</p> }
             </Header>
 
-            { children }
+            <main>
+                { children }
+            </main>
 
             <Footer />
         </S.Container>

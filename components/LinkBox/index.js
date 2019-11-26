@@ -11,9 +11,9 @@ function LinkBox({ title, description, image, link, selfPromoted }) {
         }
         <S.Content>
             <div>
-                <a href={link} target="_blank" rel="noopener">
+                { image && <a href={link} target="_blank" rel="noopener">
                     <img src={image} alt={title} />
-                </a>
+                </a> }
                 <S.Description>
                     <a href={link} target="_blank" rel="noopener">
                         <h2>{title}</h2>

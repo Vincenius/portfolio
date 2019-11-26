@@ -79,6 +79,11 @@ const Post = () => (
                 link="https://medium.com/@lakatos/30-tips-tricks-with-the-firefox-developer-tools-2e3f2ca5bc61"
                 image="https://miro.medium.com/max/1200/1*eN9nIfutJQUr5kdznmEHDQ.png"
             />
+            <LinkBox
+                title="Free for developers"
+                description="A list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers."
+                link="https://free-for.dev/#/"
+            />
             <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
     </Layout>
