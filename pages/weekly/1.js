@@ -50,6 +50,12 @@ const Post = () => (
                 image="http://fresh-folk.com/assets/images/card.jpg?v51183319899651"
             />
             <LinkBox
+                title="Divjoy - The React codebase generator"
+                description="A nice templete generator including marketing pages, contact forms, pricing, faq, authentication and routing."
+                link="https://divjoy.com/"
+                image="https://divjoy.com/static/og-image.png"
+            />
+            <LinkBox
                 title="Postwoman - An API request builder"
                 description="A free, fast, and beautiful alternative to Postman."
                 link="https://github.com/liyasthomas/postwoman"
