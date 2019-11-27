@@ -21,8 +21,8 @@ class MyHead extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="robots" content="index, follow"></meta>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-                <script type="text/javascript" async="" defer="" src="https://analytics.vincentwill.com/hokuspokusj"></script>
                 <script type="text/javascript" src="/analytics.js"></script>
+                <script type="text/javascript" src="https://analytics.vincentwill.com/hokuspokusj"></script>
 
                 { isArticle &&
                     <React.Fragment>
