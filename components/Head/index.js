@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import fetch from 'isomorphic-unfetch'
 
 class MyHead extends React.Component {
     render() {
