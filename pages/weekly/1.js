@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from './styled'
+import * as S from '../../styles/weekly'
 import { SubscribeForm, Layout, LinkBox } from '../../components'
 
 const Post = () => (
