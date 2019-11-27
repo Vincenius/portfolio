@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from './weekly/styled'
+import * as S from '../styles/weekly'
 import { WeeklyPreview, Layout } from '../components'
 
 const Home = () => (
