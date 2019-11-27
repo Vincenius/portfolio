@@ -1,24 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
+import fetch from 'isomorphic-unfetch'
 
 class MyHead extends React.Component {
-    componentDidMount() {
-        // matomo
-        if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-            var _paq = window._paq || [];
-            // _paq.push(["setDoNotTrack", true]);
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-                var u="//analytics.vincentwill.com/";
-                _paq.push(['setTrackerUrl', u+'hokuspokusp']);
-                _paq.push(['setSiteId', '1']);
-                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'hokuspokusj'; s.parentNode.insertBefore(g,s);
-            })();
-        }
-    }
-
     render() {
         const {
             title,
@@ -38,6 +22,8 @@ class MyHead extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
                 <meta name="robots" content="index, follow"></meta>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+                <script type="text/javascript" async="" defer="" src="https://analytics.vincentwill.com/hokuspokusj"></script>
+                <script type="text/javascript" src="/analytics.js"></script>
 
                 { isArticle &&
                     <React.Fragment>
