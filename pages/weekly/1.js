@@ -47,7 +47,7 @@ const Post = () => (
                 title="Fresh Folk - An illustration library of people and objects"
                 description="Each character comes with a range of poses, outfits and skin tones. Create a wide range of scenes with 43 Objects to choose from."
                 link="https://fresh-folk.com/"
-                image="http://fresh-folk.com/assets/images/card.jpg"
+                image="https://fresh-folk.com/assets/images/card.jpg"
             />
             <LinkBox
                 title="Divjoy - The React codebase generator"
