@@ -71,18 +71,18 @@ class Background1 extends React.Component {
             speed,
             addBgClass: true,
         })
-        const backgroundCss = `.background { ${S.backgroundCss({ bgColor })} }`
-        const allSpanCss = `.background span { ${S.spanCss({ size, speed, addAnimation: true })}}`
+        const backgroundCss = `.background {${S.backgroundCss({ bgColor })}}`
+        const allSpanCss = `.background span {${S.spanCss({ size, speed, addAnimation: true })}}`
 
-        return `${backgroundCss}
-
-${allSpanCss}
-
-@keyframes move {
+        return `@keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
+
+${backgroundCss}
+
+${allSpanCss}
 
 ${spanCss}
 `

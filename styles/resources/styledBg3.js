@@ -28,7 +28,22 @@ function shadeColor(color, percent) {
     return "#"+RR+GG+BB;
 }
 
+export const createKeyframe = () => {
+    return `@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+`
+}
+
 export const Container = styled.ul`
+    ${createKeyframe()}
     ${props => backgroundCss(props)}
     ${props => liStyle(props)}
     ${props => liChildStyle(props)}
@@ -60,17 +75,6 @@ export const liStyle = ({ speed, bgColor }) => {
     transform-origin: top left;
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
     animation: cube ${23 - speed}s ease-in forwards infinite;
-}
-
-@keyframes cube {
-    from {
-        transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        opacity: 1;
-    }
-    to {
-        transform: scale(20) rotate(960deg) translate(-50%, -50%);
-        opacity: 0;
-    }
 }`
 }
 

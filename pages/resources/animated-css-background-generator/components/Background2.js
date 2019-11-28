@@ -40,11 +40,12 @@ class Background2 extends React.Component {
             speed,
         } = this.state
 
-        const backgroundCss = `.background { ${S.backgroundCss({ bgColor })} }`
+        const backgroundCss = `.background {${S.backgroundCss({ bgColor })}}`
         const generalCss = `.background ${ S.generalCss({ speed }) }`
         const liCss = `${S.createCSS({ addBgClass: true, count, size })}`
 
-        return `${backgroundCss}
+        return `${S.createKeyframe()}
+${backgroundCss}
 ${generalCss}
 ${liCss}`
     }

@@ -24,7 +24,8 @@ class Background2 extends React.Component {
         const bgCss = S.backgroundCss({ bgColor })
         const liStyle = S.liStyle({ speed, bgColor })
         const liChildStyle = S.liChildStyle({ count, bgColor, addBgClass: true })
-        return `.background { ${bgCss} }
+        return `${S.createKeyframe()}
+.background {${bgCss}}
 .background ${liStyle}
 ${liChildStyle}`
     }
