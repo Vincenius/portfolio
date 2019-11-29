@@ -27,6 +27,13 @@ class MyHead extends React.Component {
                 { isArticle &&
                     <React.Fragment>
                         <link rel="canonical" href={link} />
+                        <meta name="twitter:card" content="summary" />
+                        <meta name="twitter:site" content={link} />
+                        <meta name="twitter:title" content={title} />
+                        <meta name="twitter:description" content={description} />
+                        <meta name="twitter:creator" content="@VincentWill4" />
+                        <meta name="twitter:image" content={image} />
+
                         <meta name="description" content={description} />
                         <meta property="og:title" content={title} />
                         <meta property="og:image" content={image} />
@@ -34,6 +41,7 @@ class MyHead extends React.Component {
                         <meta property="og:description" content={description} />
                         <meta property="og:url" content={link} />
                         <meta property="og:type" content="article" />
+
                         <script type="application/ld+json">
                             {`
                                 '@context': "http://schema.org",
