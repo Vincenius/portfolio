@@ -19,16 +19,22 @@ const Post = () => (
                 image="https://blog.getbootstrap.com/assets/img/bootstrap-social.png"
             />
             <LinkBox
-                title="roughViz.js"
-                description="A nice JavaScript library for creating sketchy/hand-drawn styled charts."
-                link="https://github.com/jwilber/roughViz"
-                image="https://raw.githubusercontent.com/jwilber/random_data/master/roughViz_Title.png"
+                title="Procedurally Generated SVG Landscapes"
+                description="Kevin Wang wrote this great article how to create a generator for beautiful landscape svgs."
+                link="https://kwa.ng/procedurally-generated-svg-landscapes/"
+                image="https://kwa.ng/static/4922c522dbd60d5f4a14cbd0e0b48f95/2d017/confidence-gap-adam-eastburn.jpg"
             />
             <LinkBox
                 title="JavaScript Christmas"
                 description="A few days late, but this is a advent calendar with 24 days of articles about JavaScript."
                 link="https://javascript.christmas/"
                 image="https://cdn.jsdelivr.net/gh/kgolid/lukebilder@2cec035/11/tre.png"
+            />
+            <LinkBox
+                title="roughViz.js"
+                description="A nice JavaScript library for creating sketchy/hand-drawn styled charts."
+                link="https://github.com/jwilber/roughViz"
+                image="https://raw.githubusercontent.com/jwilber/random_data/master/roughViz_Title.png"
             />
             <LinkBox
                 title="Curlie"
