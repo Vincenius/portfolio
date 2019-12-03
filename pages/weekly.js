@@ -8,6 +8,11 @@ const Home = () => (
     >
         <S.Container>
             <WeeklyPreview
+                number="2"
+                date="December 04, 2019"
+                description="Bootstrap Icons, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
+            />
+            <WeeklyPreview
                 number="1"
                 date="November 27, 2019"
                 description="SWR, Fresh Folk, Colors & fonts, Animated CSS Backgrounds, Postwoman, Pika and more.."
