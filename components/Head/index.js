@@ -32,11 +32,11 @@ class MyHead extends React.Component {
                         <meta name="twitter:title" content={title} />
                         <meta name="twitter:description" content={description} />
                         <meta name="twitter:creator" content="@VincentWill4" />
-                        <meta name="twitter:image" content={image} />
+                        <meta name="twitter:image" content={`https://vincentwill.com${image}`} />
 
                         <meta name="description" content={description} />
                         <meta property="og:title" content={title} />
-                        <meta property="og:image" content={image} />
+                        <meta property="og:image" content={`https://vincentwill.com${image}`} />
                         <meta property="og:site_name" content="Vincent Will - Blog" />
                         <meta property="og:description" content={description} />
                         <meta property="og:url" content={link} />
@@ -54,7 +54,7 @@ class MyHead extends React.Component {
                                 "datePublished":"${date}",
                                 "image": {
                                     "@type":"ImageObject",
-                                    "url":"${image}",
+                                    "url":"https://vincentwill.com${image}",
                                     "height":646,"width":1300
                                 },
                                 "description":"${description}",
