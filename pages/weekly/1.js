@@ -20,7 +20,7 @@ const Post = () => (
                 Starting from now I will save the (for me) most interesting resources, tools and reads and will share them here.
             </p>
             <p>
-                If you have somthing, you think I should mention here, let me know: <a href="mailto:vincentwill@arcor.de">vincentwill@arcor.de</a>
+                If you have somthing, you think I should mention here, let me know: <a href="mailto:info@vincentwill.com">info@vincentwill.com</a>
             </p>
         </S.IntroText>
         <S.Container>

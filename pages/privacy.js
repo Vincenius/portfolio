@@ -21,7 +21,7 @@ const Home = () => (
                 and no cookies and no other tools.
             </p>
             <p>
-                If you think I'm missing something here - please let me know: vincentwill@arcor.de
+                If you think I'm missing something here - please let me know: info@vincentwill.com
             </p>
 
             <br />
@@ -286,7 +286,7 @@ const Home = () => (
                 please contact us:
             </p>
             <ul>
-                <li>By email: vincentwill@arcor.de</li>
+                <li>By email: info@vincentwill.com</li>
             </ul>
         </ui.Container>
     </Layout>
