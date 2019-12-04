@@ -1,6 +1,7 @@
 import React from 'react'
 import * as ui from '../ui'
-import { ArticlePreview, Layout, WeeklyPreview } from '../components'
+import { ArticlePreview, Layout } from '../components'
+import { generateWeekly } from '../content/weekly'
 
 const Home = () => (
   <Layout
@@ -50,16 +51,7 @@ const Home = () => (
           <h2>Latest News</h2>
 
           <ui.SidebarContent>
-            <WeeklyPreview
-              number="2"
-              date="December 04, 2019"
-              description="Bootstrap Icons, SVG Landscapes, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
-            />
-            <WeeklyPreview
-              number="1"
-              date="November 27, 2019"
-              description="SWR, Fresh Folk, Colors & fonts, Animated CSS Backgrounds, Postwoman, Pika and more.."
-            />
+            { generateWeekly() }
           </ui.SidebarContent>
         </ui.Sidebar>
       </ui.SidebarContainer>
