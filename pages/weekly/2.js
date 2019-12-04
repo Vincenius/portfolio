@@ -9,7 +9,7 @@ const Post = () => (
         date="December 04, 2019"
         link="https://vincentwill.com/weekly/2"
         image="/weekly/weekly2.jpg"
-        description="Bootstrap Icons, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
+        description="Bootstrap Icons, SVG Landscapes, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
     >
         <S.Container>
             <LinkBox

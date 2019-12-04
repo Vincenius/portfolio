@@ -10,7 +10,7 @@ const Home = () => (
             <WeeklyPreview
                 number="2"
                 date="December 04, 2019"
-                description="Bootstrap Icons, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
+                description="Bootstrap Icons, SVG Landscapes, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
             />
             <WeeklyPreview
                 number="1"
