@@ -23,6 +23,7 @@ const data = [
 
 export default data
 
+// TODO move to generator
 export const generateWeekly = () => {
     return data.map(d => <WeeklyPreview
         key={`weekly-${d.id}`}
