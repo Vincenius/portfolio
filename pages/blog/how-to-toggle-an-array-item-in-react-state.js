@@ -1,6 +1,9 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { CodeBlock, Footer, Layout } from '../../components'
+import { CodeBlock, Layout } from '../../components'
+import meta from '../../content/articles'
+
+const postMeta = meta.find(m => m.id === 2)
 
 const snippet1 = `function toggleArrayItem(arr, item) {
     arr.includes(item)
@@ -22,11 +25,11 @@ const snippet2 = `onToggleArray = item => {
 const Post = () => (
     <Layout
         isArticle={true}
-        title="How to toggle an array item with Javascript in React State"
-        date="March 23, 2019"
-        link="https://vincentwill.com/blog/how-to-toggle-an-array-item-in-react-state"
-        image="https://vincentwill.com/blog/2-react.jpg"
-        description="In this short article I will demonstrate how to write a function to toggle array items with Javascript and inside of React state. First of all let’s have a look how to toggle an array item with Javascript (ES6): This function will get an array and…"
+        title={postMeta.headline}
+        date={postMeta.date}
+        link={`https://vincentwill.com${postMeta.link}`}
+        description={postMeta.description}
+        image="/blog/2-react.jpg"
     >
         <ui.Container>
             <p>In this short article I will demonstrate how to write a function to toggle array items with Javascript and inside of React state.</p>

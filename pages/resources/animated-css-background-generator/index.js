@@ -5,18 +5,22 @@ import Background1 from './components/Background1'
 import Background2 from './components/Background2'
 import Background3 from './components/Background3'
 import * as S from '../../../styles/resources/animatedCssBg'
+import meta from '../../../content/resources'
+
+const postMeta = meta.find(m => m.id === 1)
 
 const Demo = () => {
     const [activeBg, changeBg] = useState(0);
     return (
         <S.Container>
             <Head
-                title="Animated CSS Background Generator"
-                link="https://vincentwill.com/demos/animated-css-background-generator"
-                image="/resources/resources01.jpg"
-                description="A collection of pure css animated backgrounds with the possibility to customize"
-                date={new Date('November 27, 2019')}
                 isArticle={true}
+                title={postMeta.headline}
+                date={postMeta.date}
+                link={`https://vincentwill.com${postMeta.link}`}
+                description={postMeta.description}
+                image="/resources/resources01.jpg"
+                date={new Date(postMeta.date)}
             />
 
             <S.Navigation>

@@ -1,5 +1,3 @@
-import { WeeklyPreview } from '../components'
-
 const data = [
     {
         id: 2,
@@ -22,13 +20,3 @@ const data = [
 ]
 
 export default data
-
-// TODO move to generator
-export const generateWeekly = () => {
-    return data.map(d => <WeeklyPreview
-        key={`weekly-${d.id}`}
-        number={d.id}
-        date={d.date}
-        description={d.description}
-    />)
-}
