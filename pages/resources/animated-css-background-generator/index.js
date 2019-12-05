@@ -12,7 +12,7 @@ const Demo = () => {
         <S.Container>
             <Head
                 title="Animated CSS Background Generator"
-                link="https://vincentwill.com/demos/animated-css-background-generator"
+                link="https://vincentwill.com/resources/animated-css-background-generator"
                 image="/resources/resources01.jpg"
                 description="A collection of pure css animated backgrounds with the possibility to customize"
                 date={new Date('November 27, 2019')}
