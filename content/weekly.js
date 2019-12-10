@@ -6,7 +6,7 @@ const data = [
         link: 'https://vincentwill.com/weekly/3',
         image: '/weekly/weekly3.jpg',
         preview: '/weekly/3.jpg',
-        description: 'Self Hosted, CSS Layout, Refactoring UI, Deep Sea, Responsive Image Breakpoinst Generator and more...',
+        description: 'Self Hosted, CSS Layout, Refactoring UI, Deep Sea, react-spring and more...',
     },
     {
         id: 2,

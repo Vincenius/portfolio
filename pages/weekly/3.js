@@ -23,21 +23,27 @@ const Post = () => (
             />
             <LinkBox
                 title="CSS Layout"
-                description="A collection of popular layouts and patterns made with CSS"
+                description="A collection of popular layouts and patterns made with CSS."
                 link="https://csslayout.io/"
                 image="/weekly/screenshots/csslayouts.jpg"
             />
             <LinkBox
                 title="Labels are a last resort"
-                description=" A good guide by the people of Refactorig UI about the usage of labels in UI."
+                description="A good guide by the people of Refactorig UI about the usage of labels in UI."
                 link="https://refactoringui.com/previews/labels-are-a-last-resort/"
                 image="https://refactoring-ui.nyc3.cdn.digitaloceanspaces.com/previews/labels-are-a-last-resort-04.png"
             />
             <LinkBox
                 title="Deep Sea"
-                description=" A really cool demo by Neal Agarwal. It's also totally worth to check out his other stuff!"
+                description="A really cool demo by Neal Agarwal. It's also totally worth to check out his other stuff!"
                 link="https://neal.fun/deep-sea/"
                 image="https://neal.fun/thumbnails/deep-sea.png"
+            />
+            <LinkBox
+                title="react-spring"
+                description=" A simple, spring-physics based animation library that should cover most of your UI related animation."
+                link="https://www.react-spring.io/"
+                image="https://www.react-spring.io/share.jpg"
             />
             <LinkBox
                 title="CSS: An Art, a Science, a Nightmare"
