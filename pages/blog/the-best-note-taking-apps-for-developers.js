@@ -1,15 +1,18 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Footer, Layout } from '../../components'
+import { SubscribeForm, Layout } from '../../components'
+import meta from '../../content/articles'
+
+const postMeta = meta.find(m => m.id === 3)
 
 const Post = () => (
     <Layout
         isArticle={true}
-        title="The best note taking apps for developers"
-        date="October 16, 2019"
-        link="https://vincentwill.com/blog/the-best-note-taking-apps-for-developers"
-        image="https://vincentwill.com/blog/3-notebook.jpg"
-        description="There are tons of note taking apps out there. But which ones are best suitable for developers? In the following I'll introduce three note taking apps for developers with good code support. + Available for: Mac, Windows, Android, iOS + Nice Code editor with a…"
+        title={postMeta.headline}
+        date={postMeta.date}
+        link={`https://vincentwill.com${postMeta.link}`}
+        description={postMeta.description}
+        image="/blog/3-notebook.jpg"
     >
         <ui.Container>
             <p>There are tons of note taking apps out there. But which ones are best suitable for developers? In the following I'll introduce three note taking apps for developers with good code support.</p>
