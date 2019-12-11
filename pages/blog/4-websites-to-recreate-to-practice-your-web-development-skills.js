@@ -1,32 +1,18 @@
 import React from 'react'
 import * as ui from '../../ui'
 import { SubscribeForm, Layout } from '../../components'
+import meta from '../../content/articles'
 
-const snippet1 = `function toggleArrayItem(arr, item) {
-    arr.includes(item)
-        ? arr.filter(i => i !== item) // remove item
-        : [ ...arr, item ]; // add item
-}`
-
-const snippet2 = `onToggleArray = item => {
-    this.setState(state => {
-        const arr = state.arr.includes(item)
-            ? arr.filter(i => i !== item) // remove item
-            : [ ...arr, item ]; // add item
-        return {
-            arr,
-        };
-    });
-}`
+const postMeta = meta.find(m => m.id === 4)
 
 const Post = () => (
     <Layout
         isArticle={true}
-        title="4 Websites to recreate to practice your web development skills"
-        date="October 23, 2019"
-        link="https://vincentwill.com/blog/4-websites-to-recreate-to-practice-your-web-development-skills"
-        image="https://vincentwill.com/blog/4-duckduckgo.png"
-        description="The best way to learn web development is by practice. But when you get started you might feel lost. There are just so many things to learn, which makes it hard to choose the right project to get started. In the following I'll share some…"
+        title={postMeta.headline}
+        date={postMeta.date}
+        link={`https://vincentwill.com${postMeta.link}`}
+        description={postMeta.description}
+        image="/blog/4-duckduckgo.png"
     >
         <ui.Container>
             <p>

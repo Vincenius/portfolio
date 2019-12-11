@@ -1,6 +1,9 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { CodeBlock, Footer, Layout } from '../../components'
+import { CodeBlock, Layout } from '../../components'
+import meta from '../../content/articles'
+
+const postMeta = meta.find(m => m.id === 1)
 
 const snippet1 = `<template>
     <h1>{{ msg }}</h1>
@@ -97,11 +100,11 @@ const snippet9 = `init: function() {
 const Post = () => (
     <Layout
         isArticle={true}
-        title="Widget based website with dynamic Vue.js components"
-        date="July 27, 2018"
-        link="https://vincentwill.com/blog/widget-based-website-with-dynamic-vuejs-components"
-        image="https://vincentwill.com/blog/1-vue.jpg"
-        description="The best way to learn web development is by practice. But when you get started you might feel lost. There are just so many things to learn, which makes it hard to choose the right project to get started. In the following I'll share some…"
+        title={postMeta.headline}
+        date={postMeta.date}
+        link={`https://vincentwill.com${postMeta.link}`}
+        image="/blog/1-vue.jpg"
+        description={postMeta.description}
     >
         <ui.Container>
             <p>

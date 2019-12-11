@@ -1,15 +1,18 @@
 import React from 'react'
 import * as S from '../../styles/weekly'
 import { SubscribeForm, Layout, LinkBox } from '../../components'
+import meta from '../../content/weekly'
+
+const postMeta = meta.find(m => m.id === 2)
 
 const Post = () => (
     <Layout
         isArticle={true}
-        title="Weekly web development update from 4th December 2019"
-        date="December 04, 2019"
-        link="https://vincentwill.com/weekly/2"
-        image="/weekly/weekly2.jpg"
-        description="Bootstrap Icons, SVG Landscapes, roughViz.js, JavaScript Christmas, Curlie, Cell and more.."
+        title={postMeta.title}
+        date={postMeta.date}
+        link={postMeta.link}
+        image={postMeta.image}
+        description={postMeta.description}
     >
         <S.Container>
             <LinkBox
