@@ -18,14 +18,20 @@ const Post = () => (
         <ui.Container>
             <p>TODO Description</p>
 
-            <h3>unDraw Illustrations</h3>
-            <ui.BlockLink href="https://undraw.co/illustrations" target="_blank" rel="noopener">
-                https://undraw.co/illustrations
-            </ui.BlockLink>
-            <img src="/blog/5/undraw.jpg" alt="unDraw Illustrations" />
-            <p>
-                My favourite illustrations site, as you can easily search and customize the color of the svgs. Also they are open-source.
-            </p>
+            <ui.FlexBlock>
+                <ui.FlexImage src="/blog/5/undraw.jpg" alt="unDraw Illustrations" />
+                <div>
+                    <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">
+                        <h3>unDraw Illustrations</h3>
+                    </a>
+                    <ui.BlockLink href="https://undraw.co/illustrations" target="_blank" rel="noopener">
+                        https://undraw.co/illustrations
+                    </ui.BlockLink>
+                    <p>
+                        My favourite illustrations site, as you can easily search and customize the color of the svgs. Also they are open-source.
+                    </p>
+                </div>
+            </ui.FlexBlock>
 
             https://undraw.co/illustrations
 

@@ -71,3 +71,26 @@ export const SidebarContent = styled.aside`
         }
     }
 `
+export const FlexBlock = styled.div`
+    display: flex;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: ${breakpointSmall}) {
+        flex-direction: column;
+    }
+`
+export const FlexImage = styled.img`
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-top: 15px;
+
+    @media only screen and (max-width: ${breakpoint}) {
+        width: 200px;
+    }
+
+    @media only screen and (max-width: ${breakpointSmall}) {
+        width: 100%;
+    }
+`
