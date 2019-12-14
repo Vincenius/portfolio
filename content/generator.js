@@ -19,6 +19,18 @@ export const generateArticles = () => {
         headline={d.headline}
         description={d.description}
         link={d.link}
+        previewImage={d.previewImage}
+    />)
+}
+
+export const generateResources = () => {
+    return resourceData.map(d => <ArticlePreview
+        key={`resource-${d.id}`}
+        date={d.date}
+        headline={d.headline}
+        description={d.description}
+        link={d.link}
+        previewImage={d.previewImage}
     />)
 }
 
@@ -33,5 +45,6 @@ export const generateArticleAndResources = () => {
         headline={d.headline}
         description={d.description}
         link={d.link}
+        previewImage={d.previewImage}
     />)
 }

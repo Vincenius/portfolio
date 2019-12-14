@@ -1,10 +1,15 @@
 import styled, { css } from 'styled-components'
-import { lightGrey, greyBlue, darkGrey, greenBlue } from '../../ui/constants'
+import { lightGrey, greyBlue, darkGrey, greenBlue, breakpoint, breakpointSmall } from '../../ui/constants'
 
 export const Container = styled.article`
     border-bottom: 1px solid ${lightGrey};
     margin-bottom: 3.2rem;
     padding-bottom: 3.2rem;
+    display: flex;
+
+    @media only screen and (max-width: ${breakpointSmall}) {
+        flex-direction: column;
+    }
 `
 export const Type = styled.span`
     font-weight: bold;
@@ -51,5 +56,22 @@ export const ReadMore = styled.a`
         color: ${darkGrey};
         text-decoration: underline;
         cursor: pointer;
+    }
+`
+export const PreviewImage = styled.img`
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-top: 15px;
+
+    @media only screen and (max-width: ${breakpoint}) {
+        width: 100px;
+        height: 100px;
+    }
+
+    @media only screen and (max-width: ${breakpointSmall}) {
+        width: 100%;
+        height: 200px;
     }
 `

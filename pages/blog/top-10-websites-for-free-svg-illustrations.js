@@ -26,6 +26,27 @@ const Post = () => (
             <p>
                 My favourite illustrations site, as you can easily search and customize the color of the svgs. Also they are open-source.
             </p>
+
+            https://undraw.co/illustrations
+
+            https://gallery.manypixels.co/
+
+            https://isometric.online/
+
+            https://illlustrations.co/
+
+            https://lukaszadam.com/illustrations
+
+            https://www.humaaans.com
+
+            https://www.glazestock.com/
+
+            https://www.opendoodles.com/
+
+            https://fresh-folk.com/
+
+            https://woobro.design/
+
             <SubscribeForm />
         </ui.Container>
     </Layout>
