@@ -93,19 +93,9 @@ const Post = () => (
 
             <p>
                 Don't miss my next post. Drop your email in the box below and get it straight in your inbox.
-                Also feel free to have a look at my latest weekly update on web-dev.
             </p>
 
-            <ui.GridContainer>
-                <SubscribeForm />
-
-                <WeeklyPreview
-                    key={`weekly-${latestWeekly.id}`}
-                    number={latestWeekly.id}
-                    date={latestWeekly.date}
-                    description={latestWeekly.description}
-                />
-            </ui.GridContainer>
+            <SubscribeForm />
 
         </ui.Container>
     </Layout>

@@ -3,7 +3,7 @@ const data = [
         id: 5,
         type: 'Article',
         date: 'December 14, 2019',
-        headline: 'Ten websites for free SVG illustrations',
+        headline: 'Ten Websites For Free SVG Illustrations',
         description: "Spice up your next project with beautiful illustrations from these ten websites.",
         link: '/blog/ten-websites-for-free-svg-illustrations',
         previewImage: '/blog/5/preview.png',

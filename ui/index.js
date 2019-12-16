@@ -6,7 +6,7 @@ export const Container = styled.div`
     padding-left: 24px;
     padding-right: 24px;
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
 
     @media (max-width: ${breakpoint}) {
         padding-left: 16px;
@@ -70,11 +70,4 @@ export const SidebarContent = styled.aside`
             margin-right: 0
         }
     }
-`
-export const GridContainer = styled(Container)`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin: 40px auto;
-    padding: 0;
 `
