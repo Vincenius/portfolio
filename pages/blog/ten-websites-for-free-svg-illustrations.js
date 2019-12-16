@@ -1,59 +1,112 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Layout } from '../../components'
+import { SubscribeForm, Layout, ImageTextBlock, WeeklyPreview } from '../../components'
 import meta from '../../content/articles'
+import weeklyMeta from '../../content/weekly'
 
 const postMeta = meta.find(m => m.id === 5)
+const latestWeekly = weeklyMeta[0]
 
 const Post = () => (
     <Layout
-        // TODO
         isArticle={true}
         title={postMeta.headline}
         date={postMeta.date}
         link={`https://vincentwill.com${postMeta.link}`}
         description={postMeta.description}
-        image="/blog/4-duckduckgo.png"
+        image="/blog/5/preview.png"
     >
         <ui.Container>
-            <p>TODO Description</p>
+            <p>Spice up your next project with beautiful illustrations from these ten websites:</p>
 
-            <ui.FlexBlock>
-                <ui.FlexImage src="/blog/5/undraw.jpg" alt="unDraw Illustrations" />
-                <div>
-                    <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">
-                        <h3>unDraw Illustrations</h3>
-                    </a>
-                    <ui.BlockLink href="https://undraw.co/illustrations" target="_blank" rel="noopener">
-                        https://undraw.co/illustrations
-                    </ui.BlockLink>
-                    <p>
-                        My favourite illustrations site, as you can easily search and customize the color of the svgs. Also they are open-source.
-                    </p>
-                </div>
-            </ui.FlexBlock>
+            <ImageTextBlock
+                image="/blog/5/undraw.jpg"
+                title="unDraw Illustrations"
+                link="https://undraw.co/illustrations"
+                description="An open-source illustrations website, where you can change the colors of the illustrations online before downloading."
+            />
 
-            https://undraw.co/illustrations
+            <ImageTextBlock
+                image="/blog/5/manypixels.jpg"
+                title="ManyPixels"
+                link="https://www.manypixels.co/gallery/"
+                description="ManyPixels offer free svg illustrations with the possibility to customize the color as well."
+            />
 
-            https://gallery.manypixels.co/
+            <ImageTextBlock
+                image="/blog/5/illlustrations.jpg"
+                title="illlustrations"
+                link="https://illlustrations.co/"
+                description="100 beautiful illustrations, designed by Vijay Verma during a 100 days of illustrations challenge."
+            />
 
-            https://isometric.online/
+            <ImageTextBlock
+                image="/blog/5/isometric.jpg"
+                title="Isometric"
+                link="https://isometric.online/"
+                description="This website offers a searchable list of nice and free isometric illustrations."
+            />
 
-            https://illlustrations.co/
+            <ImageTextBlock
+                image="/blog/5/glaze.jpg"
+                title="Glaze"
+                link="https://www.glazestock.com/"
+                description="Glaze offers a lot of royalty-free high quality illustrations."
+            />
 
-            https://lukaszadam.com/illustrations
+            <ImageTextBlock
+                image="/blog/5/lukaszadam.jpg"
+                title="Lukasz Adam"
+                link="https://lukaszadam.com/illustrations"
+                description="Lukasz Adam is an independent web designer and offers a lot of free svg icon sets on his website."
+            />
 
-            https://www.humaaans.com
+            <ImageTextBlock
+                image="/blog/5/humaaans.jpg"
+                title="Humaaans"
+                link="https://www.humaaans.com"
+                description="Humaaans have a variety of different svgs of people. They also offer each element of the humans separately to be able to create your own."
+            />
 
-            https://www.glazestock.com/
+            <ImageTextBlock
+                image="/blog/5/woobro.jpg"
+                title="Woobro"
+                link="https://woobro.design/"
+                description="Woobro has some very detailed high-quality svgs for some specific use cases."
+            />
 
-            https://www.opendoodles.com/
+            <ImageTextBlock
+                image="/blog/5/freshfolk.jpg"
+                title="Fresh Folk"
+                link="https://fresh-folk.com/"
+                description="Similar to Humaaans, Fresh Folk offers people for self composing with a different style."
+            />
 
-            https://fresh-folk.com/
+            <ImageTextBlock
+                image="/blog/5/opendoodles.jpg"
+                title="Open Doodles"
+                link="https://www.opendoodles.com/"
+                description="Open Doodles provide a bunch of illustrations in a sketchy style."
+            />
 
-            https://woobro.design/
+            <hr />
 
-            <SubscribeForm />
+            <p>
+                Don't miss my next post. Drop your email in the box below and get it straight in your inbox.
+                Also feel free to have a look at my latest weekly update on web-dev.
+            </p>
+
+            <ui.GridContainer>
+                <SubscribeForm />
+
+                <WeeklyPreview
+                    key={`weekly-${latestWeekly.id}`}
+                    number={latestWeekly.id}
+                    date={latestWeekly.date}
+                    description={latestWeekly.description}
+                />
+            </ui.GridContainer>
+
         </ui.Container>
     </Layout>
 )

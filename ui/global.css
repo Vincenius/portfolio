@@ -19,6 +19,11 @@ body {
     line-height: 1.2;
 }
 
+hr {
+    color: #d5d8dc;
+    margin-bottom: 50px;
+}
+
 a {
     color:#5B6F82;
     text-decoration: underline;
