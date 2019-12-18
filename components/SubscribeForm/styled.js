@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import { greenBlue, darkGrey, lightGrey } from '../../ui/constants'
+import { lightBlue, darkGrey, lightGrey } from '../../ui/constants'
 
 export const Container = styled.form`
     margin-bottom: 30px;
@@ -21,7 +21,7 @@ export const Input = styled(TextField)`
     margin-bottom: 20px !important;
 `
 export const SubmitButton = styled(Button)`
-    background-color: ${greenBlue} !important;
+    background-color: ${lightBlue} !important;
     color: #fff !important;
 `
 export const Text = styled.div`

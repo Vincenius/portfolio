@@ -6,7 +6,7 @@ function LinkBox({ title, description, image, link, selfPromoted }) {
     return <S.Container>
         { selfPromoted && <div>
             <S.PromoBg></S.PromoBg>
-            <S.PromoLabel>self-promotion</S.PromoLabel>
+            <S.PromoLabel>{selfPromoted}</S.PromoLabel>
         </div>
         }
         <S.Content>

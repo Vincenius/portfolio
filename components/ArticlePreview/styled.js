@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { lightGrey, greyBlue, darkGrey, greenBlue, breakpoint, breakpointSmall } from '../../ui/constants'
+import { lightGrey, greyBlue, darkGrey, lightBlue, breakpoint, breakpointSmall } from '../../ui/constants'
 
 export const Container = styled.article`
     border-bottom: 1px solid ${lightGrey};
@@ -17,7 +17,7 @@ export const Type = styled.span`
     line-height: 1.86667rem;
 
     ${props => props.highlight && css`
-        b { color: ${greenBlue}; }
+        b { color: ${lightBlue}; }
     `}
 `
 export const Time = styled.time`
@@ -40,7 +40,7 @@ export const Headline = styled.h2`
         transition: all .12s ease;
 
         &:hover {
-            color: ${greenBlue};
+            color: ${lightBlue};
         }
     }
 `
@@ -50,7 +50,7 @@ export const ReadMore = styled.a`
     font-weight: 700;
     margin-top: calc(1.06667rem + .25vw);
     text-transform: uppercase;
-    color: ${greenBlue};
+    color: ${lightBlue};
 
     &:hover {
         color: ${darkGrey};

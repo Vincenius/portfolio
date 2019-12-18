@@ -44,7 +44,7 @@ const Post = () => (
                 description="A collection of pure css animated backgrounds with the possibility to customize."
                 link="/resources/animated-css-background-generator"
                 image="/resources/resources01-small.jpg"
-                selfPromoted={true}
+                selfPromoted="self-promotion"
             />
             <LinkBox
                 title="Fresh Folk - An illustration library of people and objects"

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper'
-import { greenBlue, gradient, boxShadow } from '../../ui/constants'
+import { lightBlue, gradient, boxShadow } from '../../ui/constants'
 
 export const Container = styled(Paper)`
     position: relative;
@@ -24,7 +24,7 @@ export const Content = styled.article`
         text-decoration: none;
 
         &:hover {
-            color: ${greenBlue}
+            color: ${lightBlue}
         }
     }
 

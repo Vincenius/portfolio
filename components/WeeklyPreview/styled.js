@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { lightGrey, darkGrey, greenBlue, greyBlue } from '../../ui/constants'
+import { lightGrey, darkGrey, lightBlue, greyBlue } from '../../ui/constants'
 
 export const Container = styled.article`
     border-bottom: 1px solid ${lightGrey};
@@ -34,7 +34,7 @@ export const Headline = styled.h3`
         transition: all .12s ease;
 
         &:hover {
-            color: ${greenBlue};
+            color: ${lightBlue};
         }
     }
 `
@@ -44,7 +44,7 @@ export const ReadMore = styled.a`
     line-height: 1;
 
     &:hover {
-        color: ${greenBlue};
+        color: ${lightBlue};
         text-decoration: none;
         cursor: pointer;
     }

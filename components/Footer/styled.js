@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { middleGrey, lightGrey } from '../../ui/constants'
+import { darkGrey, lightGrey } from '../../ui/constants'
 import * as ui from '../../ui'
 
 export const Container = styled.footer`
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0px;
-    color: ${middleGrey};
+    color: ${darkGrey};
     border-top: 1px solid ${lightGrey};
 `
 export const Content = styled(ui.Container)`
@@ -24,7 +24,7 @@ export const Copyright = styled.div`
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0px;
-    color: ${middleGrey};
+    color: ${darkGrey};
     margin-top: 12px;
 `
 export const Screenreader = styled.span`
@@ -72,7 +72,7 @@ export const FooterLinks = styled.ul`
 
     a {
         text-decoration: none;
-        color: ${middleGrey};
+        color: ${darkGrey};
 
         &:hover {
             text-decoration: underline;

@@ -28,6 +28,12 @@ const Post = () => (
                 image="https://cms-assets.tutsplus.com/uploads/users/30/posts/34223/image/is.jpg"
             />
             <LinkBox
+                title="Challenging projects every programmer should try"
+                description="A list of projects to get started, when you're learning a new programming language or framework."
+                link="https://web.eecs.utk.edu/~azh/blog/challengingprojects.html"
+                image="https://web.eecs.utk.edu/~azh/blog/images/peaybasic.png"
+            />
+            <LinkBox
                 title="Things end users care about but programmers don't"
                 description='A list if things that end users would often like to see.'
                 link="https://instadeq.com/blog/posts/things-end-users-care-about-but-programmers-dont/"
@@ -46,11 +52,17 @@ const Post = () => (
                 image="https://miro.medium.com/max/2114/1*PYBhcIuCopivLOiBBvG0cw.png"
             />
             <LinkBox
+                title="No to Chrome"
+                description="They are raising awareness of how Google is shaping the internet, your present and future for its own ends."
+                link="https://notochrome.org/"
+                image="https://notochrome.org/wp-content/NTC-twitter-blue-big-1200x676.jpg"
+            />
+            <LinkBox
                 title="Ten Websites For Free SVG Illustrations"
                 description="A list of websites for free SVG icons, I've gather thoughout the years."
                 link="https://vincentwill.com/blog/ten-websites-for-free-svg-illustrations"
                 image="https://vincentwill.com/blog/5/preview.png"
-                selfPromoted={true}
+                selfPromoted="New Blogpost"
             />
             <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
