@@ -6,7 +6,7 @@ const data = [
         link: 'https://vincentwill.com/weekly/4',
         image: '/weekly/weekly4.jpg',
         preview: '/weekly/4.jpg',
-        description: 'TODO...',
+        description: 'Nedux, New CSS “:is()”, Challenging projects, musicForProgramming, No to Chrome and more...',
     },
     {
         id: 3,
