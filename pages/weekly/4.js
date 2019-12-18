@@ -14,6 +14,11 @@ const Post = () => (
         image={postMeta.image}
         description={postMeta.description}
     >
+        <S.IntroText>
+            Hello people, it's time for the next weekly update.<br/>
+            As always feel free to share feedback or resources for the next weekly by passing me an email:&nbsp;
+            <a href="mailto:info@vincentwill.com">info@vincentwill.com</a> :)
+        </S.IntroText>
         <S.Container>
             <LinkBox
                 title="Nedux"
