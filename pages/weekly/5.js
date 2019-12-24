@@ -21,6 +21,12 @@ const Post = () => (
         </S.IntroText>
         <S.Container>
             <LinkBox
+                title="The Most Hearted Of 2019"
+                description="The most popular Pens from the year 2019 of Codepen. Definitely worth checking out."
+                link="https://codepen.io/2019/popular/pens"
+                image="/weekly/screenshots/codepen2019.png"
+            />
+            <LinkBox
                 title="V 8.0 Release"
                 description="V8 is Google’s open source high-performance JavaScript and WebAssembly engine. It is used in Chrome and in Node.js, among others."
                 link="https://v8.dev/blog/v8-release-80"

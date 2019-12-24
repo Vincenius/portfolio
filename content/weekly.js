@@ -6,7 +6,7 @@ const data = [
         link: 'https://vincentwill.com/weekly/5',
         image: '/weekly/weekly5.jpg',
         preview: '/weekly/5.jpg',
-        description: 'V 8.0, lazy-simon.js, GitHub Apps and more...',
+        description: 'Codepen Most Hearted 2019, V 8.0, lazy-simon.js, GitHub Apps and more...',
     },
     {
         id: 4,
