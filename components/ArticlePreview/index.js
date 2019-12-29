@@ -33,11 +33,11 @@ const ArticlePreview = ({
           </S.Headline>
         </header>
         <p>{description}</p>
-        <Link href={link}>
+        <a href={link}>
           <S.ReadMore>
             { isResource ? 'Open Resource' : 'Read more' }
           </S.ReadMore>
-        </Link>
+        </a>
       </div>
     </S.Container>
   )
