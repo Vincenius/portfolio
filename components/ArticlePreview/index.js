@@ -11,6 +11,7 @@ const ArticlePreview = ({
   previewImage,
 }) => {
   const d = new Date(date)
+  const isResource = type === 'Resource'
 
   return (
     <S.Container>
@@ -22,7 +23,7 @@ const ArticlePreview = ({
       <div>
         <header>
           { type &&
-            <S.Type highlight={type==='Resource'}>
+            <S.Type highlight={isResource}>
               <b>{type}</b> -&nbsp;
             </S.Type>
           }
@@ -34,7 +35,7 @@ const ArticlePreview = ({
         <p>{description}</p>
         <Link href={link}>
           <S.ReadMore>
-            Read more
+            { isResource ? 'Open Resource' : 'Read more' }
           </S.ReadMore>
         </Link>
       </div>

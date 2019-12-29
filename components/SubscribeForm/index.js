@@ -24,7 +24,7 @@ function SubscribeForm({ text }) {
                     placeholder="email address"
                 />
                 <S.HiddenInput>
-                    <input tabindex="-1" name="b_23a611280baff5c6bd68c83e3_8dd07d6ca8" type="text" />
+                    <input tabIndex="-1" name="b_23a611280baff5c6bd68c83e3_8dd07d6ca8" type="text" />
                 </S.HiddenInput>
                 <div>
                     <S.SubmitButton

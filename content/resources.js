@@ -1,5 +1,14 @@
 const data = [
     {
+        id: 2,
+        type: 'Resource',
+        date: 'December 29, 2019',
+        headline: "Convert2Svg",
+        description: "A free and open-source tool to easily transform any image or photo into a multi colored svg vector file.",
+        link: "https://convert2svg.com/",
+        previewImage: "https://convert2svg.com/preview.jpg",
+    },
+    {
         id: 1,
         type: 'Resource',
         date: 'November 27, 2019',
