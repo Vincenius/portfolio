@@ -1,5 +1,14 @@
 const data = [
     {
+        id: 6,
+        title: 'Weekly web development update from 1st January 2020',
+        date: 'January 01, 2020',
+        link: 'https://vincentwill.com/weekly/6',
+        image: '/weekly/weekly6.jpg',
+        preview: '/weekly/5.jpg',
+        description: 'TODO and more...',
+    },
+    {
         id: 5,
         title: 'Weekly web development update from 25th December 2019',
         date: 'December 25, 2019',
