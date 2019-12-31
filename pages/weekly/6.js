@@ -52,6 +52,12 @@ const Post = () => (
                 link="https://uxdesign.cc/accessibility-tools-for-designers-and-developers-ea400a415c0a"
                 image="https://miro.medium.com/max/4000/1*v91ZxZxDtnXpU72vDvYaJg.png"
             />
+            <LinkBox
+                title="massCode"
+                description="A free and open source code snippets manager for developers."
+                link="https://github.com/antonreshetov/massCode"
+                image="https://raw.githubusercontent.com/antonreshetov/massCode/master/logo.png"
+            />
             <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
     </Layout>
