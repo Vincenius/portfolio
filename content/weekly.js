@@ -6,7 +6,7 @@ const data = [
         link: 'https://vincentwill.com/weekly/6',
         image: '/weekly/weekly6.jpg',
         preview: '/weekly/5.jpg',
-        description: 'TODO and more...',
+        description: 'Just JavaScript, CHL.LI, CoreUI Icons, Convert2Svg, Generative Placeholders and more...',
     },
     {
         id: 5,
