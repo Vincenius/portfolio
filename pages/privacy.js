@@ -41,10 +41,9 @@ const Home = () => (
                 you use our Service and the choices you have associated
                 with that data. Our Privacy Policy for Vincent Will is
                 created with the help of the
-                <a
-                    href="https://www.privacypolicies.com/free-privacy-policy-generator/"
-                    >PrivacyPolicies.com Privacy Policy Generator</a
-                >.
+                <a href="https://www.privacypolicies.com/free-privacy-policy-generator/">
+                    PrivacyPolicies.com Privacy Policy Generator
+                </a>.
             </p>
             <p>
                 We use your data to provide and improve the Service. By
@@ -106,8 +105,7 @@ const Home = () => (
                 manage cookies in the
                 <a
                     href="https://privacypolicies.com/blog/how-to-delete-cookies/"
-                    >Browser Cookies Guide</a
-                >.
+                    >Browser Cookies Guide</a>.
             </p>
             <p>Examples of Cookies we use:</p>
             <ul>
@@ -229,9 +227,7 @@ const Home = () => (
                     <p>
                         Piwik or Matomo is a web analytics service. You
                         can visit their Privacy Policy page here:
-                        <a href="https://matomo.org/privacy-policy"
-                            >https://matomo.org/privacy-policy</a
-                        >
+                        <a href="https://matomo.org/privacy-policy">https://matomo.org/privacy-policy</a>
                     </p>
                 </li>
             </ul>
