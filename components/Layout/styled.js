@@ -10,7 +10,6 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    visibility: visible;
 `
 export const Time = styled.time`
     color: rgba(255,255,255,0.8);

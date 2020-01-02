@@ -1,9 +1,10 @@
 import React from 'react'
 import * as S from '../../styles/weekly'
-import { SubscribeForm, Layout, LinkBox } from '../../components'
+import { SubscribeForm, Layout, LinkBox, PrevNext } from '../../components'
 import meta from '../../content/weekly'
 
-const postMeta = meta.find(m => m.id === 2)
+const postId = 2
+const postMeta = meta.find(m => m.id === postId)
 
 const Post = () => (
     <Layout
@@ -77,6 +78,8 @@ const Post = () => (
             />
             <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
         </S.Container>
+
+        <PrevNext postId={postId} />
     </Layout>
 )
 

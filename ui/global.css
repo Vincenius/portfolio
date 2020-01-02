@@ -19,10 +19,6 @@ body {
     line-height: 1.2;
 }
 
-.content {
-    visibility: hidden;
-}
-
 hr {
     color: #d5d8dc;
     margin-bottom: 50px;

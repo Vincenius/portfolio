@@ -6,6 +6,7 @@ export { default as Header } from './Header';
 export { default as ImageTextBlock } from './ImageTextBlock';
 export { default as Layout } from './Layout';
 export { default as LinkBox } from './LinkBox';
+export { default as PrevNext } from './PrevNext'
 export { default as Nav } from './Nav';
 export { default as SubscribeForm } from './SubscribeForm';
 export { default as WeeklyPreview } from './WeeklyPreview';
