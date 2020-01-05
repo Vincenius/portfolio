@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Layout, ImageTextBlock, WeeklyPreview } from '../../components'
+import { SubscribeForm, Layout, ImageTextBlock, WeeklyPreview, Comments } from '../../components'
 import meta from '../../content/articles'
 import weeklyMeta from '../../content/weekly'
 
@@ -96,7 +96,7 @@ const Post = () => (
             </p>
 
             <SubscribeForm />
-
+            <Comments />
         </ui.Container>
     </Layout>
 )

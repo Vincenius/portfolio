@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { CodeBlock, Layout } from '../../components'
+import { CodeBlock, Layout, Comments } from '../../components'
 import meta from '../../content/articles'
 
 const postMeta = meta.find(m => m.id === 1)
@@ -237,6 +237,8 @@ const Post = () => (
                 them multiple times to different DOM elements.
             </p>
             <p>Cheers,<br />Vincent</p>
+
+            <Comments />
         </ui.Container>
     </Layout>
 )

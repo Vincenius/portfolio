@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Layout } from '../../components'
+import { SubscribeForm, Layout, Comments } from '../../components'
 import meta from '../../content/articles'
 
 const postMeta = meta.find(m => m.id === 4)
@@ -83,6 +83,7 @@ const Post = () => (
                 Don't miss my next post. Drop your email in the box below and get it straight in your inbox. 
             </p>
             <SubscribeForm />
+            <Comments />
         </ui.Container>
     </Layout>
 )
