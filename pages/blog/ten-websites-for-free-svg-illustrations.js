@@ -91,10 +91,6 @@ const Post = () => (
 
             <hr />
 
-            <p>
-                Don't miss my next post. Drop your email in the box below and get it straight in your inbox.
-            </p>
-
             <SubscribeForm />
             <Comments />
         </ui.Container>

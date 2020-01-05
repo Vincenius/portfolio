@@ -76,7 +76,7 @@ const Post = () => (
                 link="https://24ways.org/2019/making-a-better-custom-select-element/?ref=resoource.com"
                 image="https://cloud.24ways.org/2019/sharing/making-a-better-custom-select-element.png"
             />
-            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm type="weekly" />
         </S.Container>
 
         <PrevNext postId={postId} />

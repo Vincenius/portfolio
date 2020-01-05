@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styled'
 
-function SubscribeForm({ text }) {
+function SubscribeForm({ type }) {
     return (
         <S.Container
             id="mc-embedded-subscribe-form"
@@ -12,9 +12,11 @@ function SubscribeForm({ text }) {
             target="_blank"
         >
             <S.Wrapper id="mc_embed_signup_scroll">
-                { text && <S.Text>
-                    {text}
-                </S.Text>}
+                <h2>Always get the latest updates</h2>
+                <S.Text>
+                    Don't miss { type === 'weekly' ? 'the next weekly' : 'my next post' }. Drop your email below and get it straight in your inbox.
+                </S.Text>
+
                 <S.Input
                     id="mce-EMAIL"
                     label="E-Mail"

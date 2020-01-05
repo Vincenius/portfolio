@@ -76,7 +76,7 @@ const Post = () => (
                 link="https://dev.to/mfarajewicz/6-github-repos-for-instant-knowledge-boost-3mo0"
                 image="https://res.cloudinary.com/practicaldev/image/fetch/s--0oew9f0c--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://res.cloudinary.com/practicaldev/image/fetch/s--rV1qmRbb--/c_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_420%2Cq_auto%2Cw_1000/https://thepracticaldev.s3.amazonaws.com/i/6t9lakxmowneulfyvokg.jpg"
             />
-            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm type="weekly" />
         </S.Container>
 
         <PrevNext postId={postId} />

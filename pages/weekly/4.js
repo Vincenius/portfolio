@@ -70,7 +70,7 @@ const Post = () => (
                 image="https://vincentwill.com/blog/5/preview.png"
                 selfPromoted="New Blogpost"
             />
-            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm type="weekly" />
         </S.Container>
 
         <PrevNext postId={postId} />

@@ -93,9 +93,7 @@ const Post = () => (
                 <i>HackMD</i> would be the best choice if you don't want to download an app or want a nice GitHub integration.
             </p>
             <br />
-            <p>
-                Don't miss my next post. Drop your email in the box below and get it straight in your inbox.
-            </p>
+
             <SubscribeForm />
             <Comments />
         </ui.Container>

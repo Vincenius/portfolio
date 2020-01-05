@@ -15,6 +15,7 @@ export const Wrapper = styled(Paper)`
     padding: 20px;
     display: inline-block;
     min-width: 300px;
+    width: 100%;
 `
 export const Input = styled(TextField)`
     width: 100%;
@@ -26,7 +27,5 @@ export const SubmitButton = styled(Button)`
 `
 export const Text = styled.div`
     color: ${darkGrey};
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid ${lightGrey};
+    margin-bottom: 30px;
 `

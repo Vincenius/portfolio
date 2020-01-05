@@ -88,7 +88,7 @@ const Post = () => (
                 description="A list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers."
                 link="https://free-for.dev/#/"
             />
-            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm type="weekly" />
         </S.Container>
 
         <PrevNext postId={postId} />

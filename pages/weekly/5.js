@@ -57,7 +57,7 @@ const Post = () => (
                 link="https://blog.betomorrow.com/replacing-redux-with-observables-and-react-hooks-acdbbaf5ba80"
                 image="https://miro.medium.com/max/3200/1*mgGAjZDWMu1OnvGyTvbSYw@2x.png"
             />
-            <SubscribeForm text="Don't miss the next weekly. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm type="weekly" />
         </S.Container>
 
         <PrevNext postId={postId} />

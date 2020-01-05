@@ -9,7 +9,7 @@ const Home = () => (
     >
         <ui.Container>
             { generateResources() }
-            <SubscribeForm text="Don't miss the next resource. Drop your email in the box below and get it straight in your inbox." />
+            <SubscribeForm />
         </ui.Container>
     </Layout>
 )
