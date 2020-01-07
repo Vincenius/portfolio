@@ -6,17 +6,28 @@ export const Container = styled(UiContainer)`
     display: flex;
     justify-content: space-between;
 `
-export const Next = styled.a`
+export const Link = styled.a`
+    max-width: 50%;
+    margin: ${props => props.right ? '0 0 0 20px' : '0 20px 0 0'};
+    text-align: ${props => props.right ? 'right' : 'left'};
+
+    span {
+        display: block;
+    }
+`
+export const Next = styled.div`
     display: inline-flex;
     align-items: center;
+    margin-bottom: 10px;
 
     svg {
         margin-left: 10px;
     }
 `
-export const Prev = styled.a`
+export const Prev = styled.div`
     display: inline-flex;
     align-items: center;
+    margin-bottom: 10px;
 
     svg {
         transform: rotate(180deg);

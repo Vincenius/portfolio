@@ -1,9 +1,10 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Layout, Comments } from '../../components'
+import { SubscribeForm, Layout, Comments, PrevNext } from '../../components'
 import meta from '../../content/articles'
 
-const postMeta = meta.find(m => m.id === 4)
+const postId = 4
+const postMeta = meta.find(m => m.id === postId)
 
 const Post = () => (
     <Layout
@@ -81,6 +82,9 @@ const Post = () => (
             </p>
 
             <SubscribeForm />
+
+            <PrevNext postId={postId} isArticle={true} />
+
             <Comments />
         </ui.Container>
     </Layout>
