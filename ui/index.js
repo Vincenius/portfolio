@@ -13,6 +13,11 @@ export const Container = styled.div`
         padding-right: 16px;
     }
 `
+export const ArticleContainer = styled(Container)`
+    img {
+        max-width: 100%;
+    }
+`
 export const PaddingContainer = styled(Container)`
     padding: 0 100px;
 

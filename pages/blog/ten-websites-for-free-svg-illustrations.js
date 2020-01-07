@@ -15,7 +15,7 @@ const Post = () => (
         description={postMeta.description}
         image="/blog/5/preview.png"
     >
-        <ui.Container>
+        <ui.ArticleContainer as="article">
             <p>Spice up your next project with beautiful illustrations from these ten websites:</p>
 
             <ImageTextBlock
@@ -95,7 +95,7 @@ const Post = () => (
             <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
-        </ui.Container>
+        </ui.ArticleContainer>
     </Layout>
 )
 

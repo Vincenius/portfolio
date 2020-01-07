@@ -107,7 +107,7 @@ const Post = () => (
         image="/blog/1-vue.jpg"
         description={postMeta.description}
     >
-        <ui.Container>
+        <ui.ArticleContainer as="article">
             <p>
                 In this post I will explain how to generate a webpage using dynamic Vue.js components. This could be the foundation of a CMS based on Vue.
             </p>
@@ -242,7 +242,7 @@ const Post = () => (
             <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
-        </ui.Container>
+        </ui.ArticleContainer>
     </Layout>
 )
 
