@@ -1,11 +1,20 @@
 const data = [
     {
+        id: 7,
+        title: 'Weekly web development update from 7th January 2020',
+        date: 'January 07, 2020',
+        link: 'https://vincentwill.com/weekly/7',
+        image: '/weekly/weekly7.jpg',
+        preview: '/weekly/7.jpg',
+        description: 'Oh Shit, Git!?!, Colorsinspo, Parcel, Redux Style Guite, Bot Land, Rhubarb and more...',
+    },
+    {
         id: 6,
         title: 'Weekly web development update from 1st January 2020',
         date: 'January 01, 2020',
         link: 'https://vincentwill.com/weekly/6',
         image: '/weekly/weekly6.jpg',
-        preview: '/weekly/5.jpg',
+        preview: '/weekly/6.jpg',
         description: 'Just JavaScript, CHL.LI, CoreUI Icons, Convert2Svg, Generative Placeholders and more...',
     },
     {
