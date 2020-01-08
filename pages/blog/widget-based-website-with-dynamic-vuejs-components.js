@@ -1,9 +1,10 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { CodeBlock, Layout, Comments } from '../../components'
+import { CodeBlock, Layout, Comments, PrevNext } from '../../components'
 import meta from '../../content/articles'
 
-const postMeta = meta.find(m => m.id === 1)
+const postId = 1
+const postMeta = meta.find(m => m.id === postId)
 
 const snippet1 = `<template>
     <h1>{{ msg }}</h1>
@@ -237,6 +238,8 @@ const Post = () => (
                 them multiple times to different DOM elements.
             </p>
             <p>Cheers,<br />Vincent</p>
+
+            <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
         </ui.Container>

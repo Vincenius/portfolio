@@ -1,11 +1,10 @@
 import React from 'react'
 import * as ui from '../../ui'
-import { SubscribeForm, Layout, ImageTextBlock, WeeklyPreview, Comments } from '../../components'
+import { SubscribeForm, Layout, ImageTextBlock, PrevNext, Comments } from '../../components'
 import meta from '../../content/articles'
-import weeklyMeta from '../../content/weekly'
 
-const postMeta = meta.find(m => m.id === 5)
-const latestWeekly = weeklyMeta[0]
+const postId = 5
+const postMeta = meta.find(m => m.id === postId)
 
 const Post = () => (
     <Layout
@@ -92,6 +91,9 @@ const Post = () => (
             <hr />
 
             <SubscribeForm />
+
+            <PrevNext postId={postId} isArticle={true} />
+
             <Comments />
         </ui.Container>
     </Layout>
