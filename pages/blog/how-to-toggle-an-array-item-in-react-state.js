@@ -32,7 +32,7 @@ const Post = () => (
         description={postMeta.description}
         image="/blog/2-react.jpg"
     >
-        <ui.Container>
+        <ui.ArticleContainer as="article">
             <p>In this short article I will demonstrate how to write a function to toggle array items with Javascript and inside of React state.</p>
             <p>First of all let’s have a look how to toggle an array item with Javascript (ES6):</p>
 
@@ -54,7 +54,7 @@ const Post = () => (
             <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
-        </ui.Container>
+        </ui.ArticleContainer>
     </Layout>
 )
 

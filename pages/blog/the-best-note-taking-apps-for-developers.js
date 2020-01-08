@@ -15,7 +15,7 @@ const Post = () => (
         description={postMeta.description}
         image="/blog/3-notebook.jpg"
     >
-        <ui.Container>
+        <ui.ArticleContainer as="article">
             <p>There are tons of note taking apps out there. But which ones are best suitable for developers? In the following I'll introduce three note taking apps for developers with good code support.</p>
             <h3>Notion</h3>
             <ui.BlockLink href="https://www.notion.so/" target="_blank" rel="noopener">
@@ -100,7 +100,7 @@ const Post = () => (
             <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
-        </ui.Container>
+        </ui.ArticleContainer>
     </Layout>
 )
 

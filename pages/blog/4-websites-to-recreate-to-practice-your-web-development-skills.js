@@ -15,7 +15,7 @@ const Post = () => (
         description={postMeta.description}
         image="/blog/4-duckduckgo.png"
     >
-        <ui.Container>
+        <ui.ArticleContainer as="article">
             <p>
                 The best way to learn web development is by practice.
                 But when you get started you might feel lost. There are just so many things to learn,
@@ -86,7 +86,7 @@ const Post = () => (
             <PrevNext postId={postId} isArticle={true} />
 
             <Comments />
-        </ui.Container>
+        </ui.ArticleContainer>
     </Layout>
 )
 
