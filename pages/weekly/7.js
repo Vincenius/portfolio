@@ -41,6 +41,12 @@ const Post = () => (
                 image="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
             />
             <LinkBox
+                title="Beautiful React Hooks"
+                description="A collection of React Hooks to speed-up the development."
+                link="https://github.com/antonioru/beautiful-react-hooks"
+                image="https://raw.githubusercontent.com/antonioru/beautiful-react-hooks/master/usage_example.png"
+            />
+            <LinkBox
                 title="Bot Land"
                 description="A fun online strategy game, where you have to build and programm your own bot."
                 link="https://bot.land/"
@@ -57,6 +63,12 @@ const Post = () => (
                 description="A list of resources for designing and building dark mode experiences."
                 link="https://darkmodedesign.xyz"
                 image="/weekly/screenshots/darkmodedesign.jpg"
+            />
+            <LinkBox
+                title="astuto"
+                description="An open source customer feedback tool, helping to collect, manage and prioritize feedback from users."
+                link="https://github.com/riggraz/astuto"
+                image="https://raw.githubusercontent.com/riggraz/astuto/master/images/logo-and-name.png"
             />
 
             <SubscribeForm type="weekly" />
