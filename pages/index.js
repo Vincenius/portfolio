@@ -18,7 +18,11 @@ const Home = () => (
           <h2>Latest News</h2>
 
           <ui.SidebarContent>
-            { generateWeekly() }
+            { generateWeekly(6) }
+
+            <a href="/weekly">
+              See all weekly news
+            </a>
           </ui.SidebarContent>
         </ui.Sidebar>
       </ui.SidebarContainer>

@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { breakpoint, breakpointSmall, breakpointLarge } from './constants'
+import {
+    breakpoint,
+    breakpointSmall,
+    breakpointLarge,
+    lightBlue,
+    darkGrey,
+} from './constants'
 
 export const Container = styled.div`
     max-width: 1128px;
@@ -56,23 +62,23 @@ export const Sidebar = styled.aside`
 export const SidebarContent = styled.aside`
     @media (max-width: ${breakpointLarge}) {
         display: flex;
-    }
-
-    @media (max-width: ${breakpoint}) {
         flex-direction: column;
     }
 
     > * {
         @media (max-width: ${breakpointLarge}) {
-            margin-right: 50px;
-
-            &:last-child {
-                margin-right: 0;
-            }
+            max-width: 480px;
         }
+    }
 
-        @media (max-width: ${breakpoint}) {
-            margin-right: 0
+    > a:last-child {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        color: ${lightBlue};
+
+        &:hover {
+            color: ${darkGrey};
         }
     }
 `

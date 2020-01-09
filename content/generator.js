@@ -3,8 +3,11 @@ import weeklyData from './weekly'
 import articleData from './articles'
 import resourceData from './resources'
 
-export const generateWeekly = () => {
-    return weeklyData.map(d => <WeeklyPreview
+export const generateWeekly = maxCount => {
+    const data = maxCount
+        ? weeklyData.slice(0,maxCount)
+        : weeklyData
+    return data.map(d => <WeeklyPreview
         key={`weekly-${d.id}`}
         number={d.id}
         date={d.date}
