@@ -1,5 +1,14 @@
 const data = [
     {
+        id: 8,
+        title: 'Weekly web development update from 15th January 2020',
+        date: 'January 15, 2020',
+        link: 'https://vincentwill.com/weekly/8',
+        image: '/weekly/weekly8.jpg',
+        preview: '/weekly/8.jpg',
+        description: 'Gradient Magic, Broot, cacolor.co, stencils, 23 VS Code Shortcuts, Craft.js and more...',
+    },
+    {
         id: 7,
         title: 'Weekly web development update from 8th January 2020',
         date: 'January 08, 2020',
