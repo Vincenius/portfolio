@@ -1,5 +1,0 @@
-# Test Redirect
-# https://docs.netlify.com/routing/redirects/redirect-options/
-
-/redirectTest   /
-/redirectTest/* http://localhost:3000/
