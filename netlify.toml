@@ -1,5 +1,5 @@
 [[redirects]]
-from = "/news"
-to = "/blog"
-status = 301
-force = true
+  from = "/news/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
