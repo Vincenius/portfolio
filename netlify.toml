@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/redirect-test/*"
-  to = "/:splat"
-  status = 304
-  force = true
