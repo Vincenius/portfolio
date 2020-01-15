@@ -1,0 +1,4 @@
+# Test Redirect
+
+/redirectTest   /
+/redirectTest/* http://localhost:3000/
