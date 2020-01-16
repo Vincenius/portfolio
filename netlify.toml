@@ -1,5 +1,5 @@
 [[redirects]]
   from = "/*"
-  to = "/:splat"
+  to = "https://wweb.dev/:splat"
   status = 301
   force = true
