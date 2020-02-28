@@ -5,7 +5,8 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #000;
+  position: relative;
+  z-index: 1;
 
   h2 {
     color: #fff;

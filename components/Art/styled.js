@@ -7,12 +7,13 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   color: #fff;
+  position: relative;
+  z-index: 1;
 `
 export const BgImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
-  filter: brightness(20%);
+  filter: brightness(30%);
 `
