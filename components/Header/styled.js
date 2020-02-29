@@ -28,9 +28,9 @@ export const Headline = styled.h1`
         &::after {
             content: "";
             position: absolute;
-            bottom: 10px;
+            bottom: 8%;
             left: 0;
-            height: 6px;
+            height: 5%;
             width: 100%;
             background: ${gradient};
             background-size: 200% 200%;

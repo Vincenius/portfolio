@@ -15,7 +15,9 @@ export const Container = styled.section`
 export const BgImage = styled.img`
   width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: bottom;
+  max-width: 50%;
 `
 export const Content = styled.div`
   display: flex;

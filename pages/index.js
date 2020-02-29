@@ -7,7 +7,6 @@ const Home = () => (
     <FluidBg />
     <Header />
     <Music />
-    <Art />
   </div>
 )
 
