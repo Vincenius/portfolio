@@ -5,7 +5,7 @@ const Home = () => (
   <div>
     <Head />
     <FluidBg />
-    { /* TODO <SocialBar /> */ }
+    <SocialBar />
     <Header />
     { /* <WebDev /> */ }
     { /* <Music /> */ }
