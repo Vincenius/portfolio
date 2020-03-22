@@ -1,5 +1,5 @@
 import React from 'react'
-import { GitHub, Twitter, LinkedIn } from '@material-ui/icons'
+import { GitHub, Twitter, LinkedIn, Email } from '@material-ui/icons'
 import * as S from './styled'
 
 const SocialBar = props => (
@@ -12,6 +12,9 @@ const SocialBar = props => (
         </a>
         <a href="https://www.linkedin.com/in/vincent-will-58356212a/" target="_blank" rel="noopener noreferrer">
             <LinkedIn />
+        </a>
+        <a href="mailto:info@vincentwill.com">
+            <Email />
         </a>
     </S.Container>
 )
