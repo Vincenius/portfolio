@@ -40,7 +40,7 @@ class ReactFluidAnimation extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this._onResize)
-    window.addEventListener('scroll', this._onScroll)
+    // window.addEventListener('scroll', this._onScroll)
     this._reset(this.props)
     this._tick()
 
@@ -49,7 +49,7 @@ class ReactFluidAnimation extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this._onResize)
-    window.removeEventListener('scroll', this._onScroll)
+    // window.removeEventListener('scroll', this._onScroll)
     if (this._tickRaf) {
       raf.cancel(this._tickRaf)
       this._tickRaf = null
@@ -72,7 +72,7 @@ class ReactFluidAnimation extends Component {
           width: '100%',
           height: '100%',
           overflow: 'hidden',
-          position: 'fixed',
+          position: 'absolute',
           height: '100vh',
         }}
         {...rest}
@@ -80,10 +80,13 @@ class ReactFluidAnimation extends Component {
       >
         <canvas
           ref={this._canvasRef}
-          /* onTouchStart={this._onTouchStart}
+          // onScroll={this._onScroll}
+          onMouseDown={this._onMouseDown}
+          onMouseMove={this._onMouseMove}
+          onMouseUp={this._onMouseUp}
+          onTouchStart={this._onTouchStart}
           onTouchMove={this._onTouchMove}
-          onTouchEnd={this._onTouchEnd} */
-          onScroll={this._onScroll}
+          onTouchEnd={this._onTouchEnd}
           style={{
             width: '100%',
             height: '100%'
@@ -101,16 +104,16 @@ class ReactFluidAnimation extends Component {
     this._canvas = ref
   }
 
-  _onScroll = event => {
+  /* _onScroll = event => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop
     this._animation.onScroll({
       oldPos: this.state.lastScrollPosition,
       newPos: winScroll,
     })
     this.setState({ lastScrollPosition: winScroll })
-  }
+  } */
 
-  /* _onMouseDown = (event) => {
+  _onMouseDown = (event) => {
     event.preventDefault()
     this._animation.onMouseDown(event.nativeEvent)
   }
@@ -135,7 +138,7 @@ class ReactFluidAnimation extends Component {
 
   _onTouchEnd = (event) => {
     this._animation.onTouchEnd(event.nativeEvent)
-  } */
+  }
 
   _onResize = () => {
     this._canvas.width = this._container.clientWidth
@@ -171,7 +174,7 @@ class ReactFluidAnimation extends Component {
 
     if (animationRef) {
       animationRef(this._animation)
-      // this._animation.addRandomSplats(parseInt(Math.random() * 20) + 5)
+      this._animation.addRandomSplats(parseInt(Math.random() * 20) + 5)
     }
   }
 }

@@ -7,6 +7,7 @@ export const Container = styled.section`
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  background: #000;
 
   h2 {
     color: #fff;
