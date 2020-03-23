@@ -45,6 +45,7 @@ class ReactFluidAnimation extends Component {
     this._tick()
 
     this.setState({ lastScrollPosition: document.body.scrollTop })
+    this._animation.onMouseDown()
   }
 
   componentWillUnmount() {

@@ -2,13 +2,7 @@ import styled from 'styled-components'
 import { gradient } from '../../ui/constants'
 
 export const Container = styled.header`
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+
 `
 
 export const Headline = styled.h1`
@@ -16,8 +10,21 @@ export const Headline = styled.h1`
     color: #fff;
     font-size: 7vw;
     max-width: 1024px;
-    margin: 0 10vw;
+    width: 100%;
+    margin: 0;
+    padding: 0 10vw;
     line-height: 1.2;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+
+    @media only screen and (min-width: 1180px) {
+        font-size: 82px;
+        padding: 0 120px;
+    }
 
     a {
         position: relative;
