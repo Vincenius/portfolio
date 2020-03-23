@@ -1,5 +1,17 @@
 [[redirects]]
-  from = "/**/*"
-  to = "https://wweb.dev/:splat"
+  from = "/blog/*"
+  to = "https://wweb.dev/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/*"
+  to = "https://wweb.dev/resources/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/weekly/*"
+  to = "https://wweb.dev/weekly/:splat"
   status = 301
   force = true
